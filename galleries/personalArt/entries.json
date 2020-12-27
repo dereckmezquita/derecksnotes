@@ -1,0 +1,238 @@
+{
+    "entries": [
+        {
+            "name": "notebookDump4",
+            "author": "Dereck de Mézquita",
+            "displayName": "Notebook dump four: observations",
+            "image": "/siteImages/allPngs/690.png",
+            "date": {
+                "year": "2019",
+                "month": "10",
+                "day": "05"
+            },
+            "slogan": "More than ideal curves.",
+            "summary": "Here are some drawings, I made from my microscope, along with a couple others done of people or other miscelaneous things. They are done in black fountain pen, a Namiki Falcon.",
+            "primaryTag": "Art",
+            "tags": [
+                "Personal",
+                "Notebook",
+                "Drawing",
+                "Architecture",
+                "People",
+                "Drawings"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "notebookDump3",
+            "author": "Dereck de Mézquita",
+            "displayName": "Notebook dump three: friends studies",
+            "image": "/siteImages/allPngs/754.png",
+            "date": {
+                "year": "2019",
+                "month": "09",
+                "day": "14"
+            },
+            "slogan": "Less than ideal conditions.",
+            "summary": "I plan to collect all the drawings I make of friends on this page. Note that these are not my best drawings, and some of them will have been done in a hurry or other less than ideal conditions.",
+            "primaryTag": "Art",
+            "tags": [
+                "Personal",
+                "Notebook",
+                "Drawing",
+                "Architecture",
+                "People",
+                "Drawings"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "notebookDump2",
+            "author": "Dereck de Mézquita",
+            "displayName": "Notebook dump two: Architecture studies",
+            "image": "/siteImages/allPngs/191.png",
+            "date": {
+                "year": "2019",
+                "month": "09",
+                "day": "10"
+            },
+            "slogan": "Acetate stones and skys.",
+            "summary": "I made these while living in Angers France. Just of random buildings in the centre. I've greatly come to admire this style of building, although I doubt the level comfort associated to living in such a place would be very high.",
+            "primaryTag": "Art",
+            "tags": [
+                "Personal",
+                "Notebook",
+                "Drawing",
+                "Architecture",
+                "People",
+                "Drawings"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "notebookDump1",
+            "author": "Dereck de Mézquita",
+            "displayName": "Notebook dump one: Moscow",
+            "image": "/siteImages/allPngs/190.png",
+            "date": {
+                "year": "2019",
+                "month": "09",
+                "day": "10"
+            },
+            "slogan": "Mostly moscow, mostly...",
+            "summary": "Drawings I made during my trip to Moscow and some other places in between. These were all made on a Falafel book, using a graphite holder by Faber Castel; 2 mm point I believe in 2B.",
+            "primaryTag": "Art",
+            "tags": [
+                "Personal",
+                "Notebook",
+                "Drawing",
+                "Architecture",
+                "People",
+                "Drawings"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "20170902_photoRoll9",
+            "author": "Dereck de Mézquita",
+            "displayName": "Photo dump six: A day & night in Angers",
+            "image": "/siteImages/allPngs/387.png",
+            "date": {
+                "year": "2017",
+                "month": "09",
+                "day": "02"
+            },
+            "slogan": "Flat trees and curlies.",
+            "summary": "Some photos I took in early and late 2017 on a newly acquired, at the time, Minolta XD7. Photos include the castle, the cathedral Saint Maurice, and the Maine in Angers.",
+            "primaryTag": "Photo",
+            "tags": [
+                "Personal",
+                "Photography",
+                "People",
+                "Angers",
+                "France"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "20170712_photoRoll7",
+            "author": "Dereck de Mézquita",
+            "displayName": "Photo dump five: Nantes",
+            "image": "/siteImages/allPngs/386.png",
+            "date": {
+                "year": "2017",
+                "month": "02",
+                "day": "21"
+            },
+            "slogan": "Sugar is good for fat.",
+            "summary": "Some photos I took in mid 2017, Minolta XD7. Photos photos were done in Nantes France, depict the museum of Natural History as well as a top down view of the city.",
+            "primaryTag": "Photo",
+            "tags": [
+                "Personal",
+                "Photography",
+                "People",
+                "Nantes",
+                "France"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "20170221_photoRoll4",
+            "author": "Dereck de Mézquita",
+            "displayName": "Photo dump four: London",
+            "image": "/siteImages/allPngs/385.png",
+            "date": {
+                "year": "2017",
+                "month": "02",
+                "day": "21"
+            },
+            "slogan": "Black hearts desire cats.",
+            "summary": "Some photos I took in early 2017, Minolta X700. Photos photos were done in London and include Big Ben, the underground, the National Gallery, and Trafalgar Square.",
+            "primaryTag": "Photo",
+            "tags": [
+                "Personal",
+                "Photography",
+                "People",
+                "London",
+                "United Kingdom"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "20170221_photoRoll3",
+            "author": "Dereck de Mézquita",
+            "displayName": "Photo dump three: Dublin",
+            "image": "/siteImages/allPngs/384.png",
+            "date": {
+                "year": "2017",
+                "month": "02",
+                "day": "21"
+            },
+            "slogan": "Pesto green haute gamme.",
+            "summary": "Photos taken in Dublin Ireland early 2017, on a Minolta X700. Places include the bus, the Spire of Dublin, and the Temple Bar.",
+            "primaryTag": "Photo",
+            "tags": [
+                "Personal",
+                "Photography",
+                "People",
+                "Dublin",
+                "Ireland"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "20170221_photoRoll2",
+            "author": "Dereck de Mézquita",
+            "displayName": "Photo dump two: Paris",
+            "image": "/siteImages/allPngs/383.png",
+            "date": {
+                "year": "2017",
+                "month": "02",
+                "day": "21"
+            },
+            "slogan": "Round hydrogen calling sirens.",
+            "summary": "Paris taken with a Minolta X700, in early 2017. Places include the tower, and Notre Dame (before the fire).",
+            "primaryTag": "Photo",
+            "tags": [
+                "Personal",
+                "Photography",
+                "People",
+                "Paris",
+                "France"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "20161216_photoRoll1",
+            "author": "Dereck de Mézquita",
+            "displayName": "Photo dump one: Angers & library",
+            "image": "/siteImages/allPngs/382.png",
+            "date": {
+                "year": "2017",
+                "month": "02",
+                "day": "21"
+            },
+            "slogan": "Acetate stones and skys.",
+            "summary": "I took these in late 2016 on a newly acquired, at the time, Minolta X700. Photos include home, the Maine in Angers, and the library where I spent countless hours studying.",
+            "primaryTag": "Photo",
+            "tags": [
+                "Personal",
+                "Photography",
+                "People",
+                "Angers",
+                "France"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        }
+    ]
+}
