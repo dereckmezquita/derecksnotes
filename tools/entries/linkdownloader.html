@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/tools/entries/linkdownloader/linkdownloader.css">
+
+<title>Link downloader</title>
+<h1>Link downloader</h1>
+<p>
+    Automatically generate link files based based on prefix, suffix, and an array containing the names to serve as variables. I created this to facilitate in downloading files from RCSB.
+</p>
+<p>
+    RCSB links go by the following syntax: 
+</p>
+<ul>
+    <li>
+        https://www.rcsb.org/pdb/download/downloadFastaFiles.do?structureIdList=<strong>NAME</strong>&compressionType=uncompressed
+    </li>
+    <li>
+        https://files.rcsb.org/download/<strong>NAME</strong>.pdb
+    </li>
+    <li>
+        Plain text: 1APS, 1ULR, 1URR, 1V3Z, 1W2I, 1Y9O, 2ACY, 2BJD, 2BJE, 2FHM, 2GV1, 2HLT, 2HLU, 2K7J, 2K7K, 2VH7, 3BR8
+    </li>
+</ul>
+
+<div class="data-input">Input link prefix here: <input  id="link-prefix" class="data-input-field"></input></div>
+
+<div class="data-input">Input link suffix here: <input id="link-suffix" class="data-input-field"></input></div>
+
+<div class="data-input">Input names array here: <input id="link-list" class="data-input-field"></input></div>
+
+<div class="warning">
+    For the name array use the format: name1, name2, name3, name4...
+</div>
+
+<div class="data-input">Links output here:</div>
+<textarea type="text" id="link-output"></textarea>
+
+<button id="make-links-bttn" class="float-right" type="button">Generate links</button>
+
+<br>
+<br>
+
+<p>
+    You can save this file as a .txt then use the following script in a terminal to download all of the links: <code>wget -i textfile.txt</code>
+</p>
+
+<br>
+<ol class="foot-notes">
+    <div class="foot-notes-head">
+        Footnotes:
+    </div>
+    <li id="">
+    </li>
+</ol>
+
+
+<script type="text/javascript" src="/tools/entries/linkdownloader/linkdownloader.js"></script>

@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="/tools/entries/dnaMeltTemp/css/dnaMeltTemp.css">
+
+<title>DNA melting temperature</title>
+<h1>DNA melting temperature</h1>
+<p>
+    Either paste a sequence to calculate the melting temperature for or insert the number of each nucleotide to be used
+    in the calculation.
+</p>
+<br>
+<p>
+    Calculations are done as per this formula:
+</p>
+<p class="mathsDescription">
+    For primers with a length inferiour to 14 nt the following is used:
+</p>
+<div class="mathsFormulas" id="meltingTempDNA">
+    $$ Tm = (n(A) + n(T)) \cdot 2 + (n(G) + n(C)) \cdot 4 $$
+</div>
+<p class="mathsDescription">
+    For primers with a length superiour to 13 nt the following is used:
+</p>
+<div class="mathsFormulas" id="meltingTempDNA">
+    $$ Tm = 64.9 + 41 \cdot \frac{(n(G) + n(C) - 16.4)}{(n(A) + n(T) + n(G) + n(C))} $$
+</div>
+<p class="mathsDescription">
+    Both these formulas assume the following: 50 nM primer, 50 mM Na+, and pH 7.0. n(x) designates the number of
+    whichever base.
+</p>
+
+<div class="data-input">Input DNA Sequence here:</div>
+<textarea type="text" class="dna-seq" title="Paste a DNA sequence to calculate melting temperature."></textarea>
+
+<div class="data-input">Input DNA composition (Format: A, T, C, G):  <input class="dna-nums"></input></div>
+
+<button class="calc-button float-right" type="button">Calculate melting temp</button>
+<br>
+<div class="data-input">
+    Melting temperature of given DNA Sequence outputs here: <span class="calc-result tm-result"></span>
+</div>
+<div class="data-input">
+    The GC composition of the sequence is: <span class="calc-result gc-result"></span>
+</div>
+<div class="data-input">
+    Total sequence length: <span class="calc-result dna-seq-length"></span>
+</div>
+<div class="data-input">
+    Composition of DNA strand input
+    <ul>
+        <li>
+            A: <span class="calc-result a-num-result"></span>
+        </li>
+        <li>
+            T: <span class="calc-result t-num-result"></span>
+        </li>
+        <li>
+            C: <span class="calc-result c-num-result"></span>
+        </li>
+        <li>
+            G: <span class="calc-result g-num-result"></span>
+        </li>
+    </ul>
+</div>
+
+
+<ol class="foot-notes">
+    <div class="foot-notes-head">
+        Footnotes:
+    </div>
+    <li id="">
+        For an explanation on how this programme works please see this blog post: <a href="/blog/displayEntry.php?entry=20190827_dnaMeltTemp">JavaScript: DNA melting temperature</a>.
+    </li>
+</ol>
+
+
+<script type="text/javascript" src="/tools/entries/dnaMeltTemp/js/dnaMeltTemp.js"></script>
+
+<!-- ATGCATGTCTAAGTA -->

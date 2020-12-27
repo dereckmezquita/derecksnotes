@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/tools/entries/siRnaDesigner/css/siRna.css">
+
+<title>siRNA Designer</title>
+    <h1>siRNA Designer</h1>
+        <p>
+            Hello use this page for easy design of siRNA sequences. Please enter the following information:
+        </p>
+        <br>
+        <ul>
+            <li>
+                Target sequence
+                <ul>
+                    <li>
+                        Minimum 15 nucleotides, 5' &rarr; 3'
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Promoter sequence
+            </li>
+            <li>
+                Loop sequence
+            </li>
+        </ul>
+
+        <div class="format_form">
+            <h1 class="title">Input DNA Sequences</h1>
+
+            <label for="promoter">Desired Promoter</label>
+            <input type="text" id="promoter"/>
+
+            <label for="targetSeq">Target Sequence</label>
+            <input type="text" id="targetSeq"/>
+
+            <label for="loopSeq">Loop Sequence</label>
+            <input type="text" id="loopSeq"/>
+
+            <input type="button" id="format_targetSeq" value="Format">
+        </div>
+
+        <div class="format_output">
+            <h1 class="title">Output RNA</h1>
+
+            <label for="rna_promoter">RNA Promoter</label>
+            <input type="text" id="rna_promoter" disabled/>
+
+            <label for="sensePass">Sense/Passenger</label>
+            <input type="text" id="sensePass" disabled/>
+
+            <label for="rna_loopSeq">RNA Loop Sequence</label>
+            <input type="text" id="rna_loopSeq" disabled/>
+
+            <label for="antisenseGuide">Antisense/Guide</label>
+            <input type="text" id="antisenseGuide" disabled/>
+        </div>
+
+
+<script type="text/javascript" src="/tools/entries/siRnaDesigner/js/siRna.js"></script>
+
+<!-- ATGCATGTCTAAGTA -->

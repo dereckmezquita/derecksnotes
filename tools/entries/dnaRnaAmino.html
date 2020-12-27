@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/tools/entries/dnaRnaAmino/css/dnaRnaAmino.css">
+
+<title>DNA, RNA, amino acid converter</title>
+<h1>DNA, RNA, amino acid converter</h1>
+<p>
+    Either paste a sequence to calculate the melting temperature for or insert the number of each nucleotide to be used
+    in the conversion: DNA to RNA, to amino acids.
+</p>
+<br>
+<h2>Logic</h2>
+<p>
+    Conversions are done as so:
+</p>
+<ul>
+    <li>
+        DNA - RNA: Coding strand T -> U.
+    </li>
+</ul>
+
+<div class="data-input">Input coding DNA sequence here:</div>
+<textarea type="text" class="seqs dna-data" title="Paste a DNA sequence to calculate melting temperature."></textarea>
+
+<div class="data-input">RNA sequence outputs here:</div>
+<textarea type="text" class="seqs rna-data" title="Paste a DNA sequence to calculate melting temperature."></textarea>
+
+<div class="data-input">Amino acid sequence outputs here:</div>
+<textarea type="text" class="seqs amino-data" title="Paste a DNA sequence to calculate melting temperature."></textarea>
+
+<button class="calc-button float-right" type="button">Convert</button>
+
+<br>
+
+<ol class="foot-notes">
+    <div class="foot-notes-head">
+        Footnotes:
+    </div>
+    <li id="">
+        For an explanation on how this programme works please see this blog post: <a href=""></a>.
+    </li>
+</ol>
+
+
+<script type="text/javascript" src="/tools/entries/dnaRnaAmino/js/dnaRnaAmino.js"></script>
+
+<!-- ATGCATGTCTAAGTA -->

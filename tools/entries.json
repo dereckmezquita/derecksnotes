@@ -1,0 +1,106 @@
+{
+	"entries": [
+        {
+            "name": "linkdownloader",
+            "author": "Dereck de Mézquita",
+            "displayName": "Link downloader",
+            "image": "/siteImages/allPngs/767.png",
+            "date": {
+                "year": "2019",
+                "month": "09",
+                "day": "01"
+            },
+            "slogan": "Alna vogue and sex",
+            "summary": "Automatically generate link files based based on prefix, suffix, and an array containing the names to serve as variables. I created this to facilitate in downloading files from RCSB.",
+            "primaryTag": "WebApp",
+            "tags": ["DNA", "RNA", "Biology", "Protein", "Science", "JavaScript", "WebApp"],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "dnaRnaAmino",
+            "author": "Dereck de Mézquita",
+            "displayName": "DNA to RNA to amino acid",
+            "image": "/siteImages/allPngs/777.png",
+            "date": {
+                "year": "2019",
+                "month": "09",
+                "day": "01"
+            },
+            "slogan": "Heiro, coptic, greek.",
+            "summary": "Automatically convert coding strand DNA to RNA to amino acid.",
+            "primaryTag": "WebApp",
+            "tags": ["DNA", "RNA", "Biology", "Protein", "Science", "Calculator", "JavaScript", "WebApp"],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "dnaMeltTemp",
+            "author": "Dereck de Mézquita",
+            "displayName": "DNA melting temperature",
+            "image": "/siteImages/allPngs/196.png",
+            "date": {
+                "year": "2019",
+                "month": "08",
+                "day": "20"
+            },
+            "slogan": "Galaxies of dots to invert.",
+            "summary": "Find the melting/fusion temperature of a strand of nucleotides, by either entering the number of each nucleotide or pasting a sequence in plain text format.",
+            "primaryTag": "WebApp",
+            "tags": ["DNA", "Biology", "Protein", "Science", "Calculator", "JavaScript", "WebApp"],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "dnaFormatter",
+            "author": "Dereck de Mézquita",
+            "displayName": "DNA formatting tools",
+            "image": "/siteImages/allPngs/43.png",
+            "date": {
+                "year": "2019",
+                "month": "08",
+                "day": "14"
+            },
+            "slogan": "Earie sounds of rainbow.",
+            "summary": "A simple JavaScript based plain-text DNA formatting tools; add spaces every n characters, find the complimentary sequence, RNA <-> DNA, convert to upper/lower case characters.",
+            "primaryTag": "WebApp",
+            "tags": ["DNA", "Biology", "Protein", "Science", "Regulation", "JavaScript", "WebApp"],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "qrGenerator",
+            "author": "Dereck de Mézquita",
+            "displayName": "DigiByte Custom QR Code",
+            "image": "/siteImages/allPngs/54.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "24"
+            },
+            "slogan": "Faster, better, more DGB!",
+            "summary": "Simple JQuery web app for creating custom QR codes with integrated DigiByte logo.",
+            "primaryTag": "WebApp",
+            "tags": ["Crypto", "Tech", "Technology", "JavaScript"],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "siRna",
+            "author": "Guy",
+            "displayName": "siRNA Designer",
+            "image": "/siteImages/allPngs/21.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "24"
+            },
+            "slogan": "Cake throw your RNA",
+            "summary": "Simple JavaScript string maniupulator, made for designing siRNA from given sequences: promotor, target, guide.",
+            "primaryTag": "WebApp",
+            "tags": ["Biology", "Protein", "Science", "Regulation", "JavaScript", "WebApp"],
+            "likes": 0,
+            "published": "Yes"
+        }
+    ]
+}
