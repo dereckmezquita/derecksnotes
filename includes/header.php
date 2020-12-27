@@ -41,7 +41,7 @@
     </script>
 
 <!-- CSS Custom -->
-<link rel="stylesheet" href="/styles/css/main.css">
+<link rel="stylesheet" href="/styles/css/main.min.css">
 
 <!-- CSS Libraries -->
 <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Tangerine" rel="stylesheet">

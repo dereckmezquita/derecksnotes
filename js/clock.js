@@ -16,14 +16,14 @@ function toggleZones() {
 setInterval(function() {
     const currentTime = new Date();
 
-    const currentMonth = currentTime.toLocaleString('en-us', {month: 'long'});
+    const currentMonth = currentTime.toLocaleString('en-us', {month: 'short'});
     const currentDay = currentTime.getDate();
     const currentHour = currentTime.getHours();
     const currentMinute = currentTime.getMinutes();
     const currentSecond = currentTime.getSeconds();
 
     // Current is being called and converted in the variable with .toLocalString
-    let formattedTime = currentMonth + " " + currentDay.addPadding() + ", " + currentHour.addPadding() + ":" + currentMinute.addPadding() + ":" + currentSecond.addPadding();
+    const formattedTime = `${currentDay.addPadding()} ${currentMonth} ${currentHour.addPadding()}:${currentMinute.addPadding()}:${currentSecond.addPadding()}`;
 
     document.querySelector(".clock").innerHTML = formattedTime;
     let sideClock = false;

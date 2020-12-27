@@ -1,5 +1,6 @@
 <div class="topnav" id="myTopnav">
     <a class="inactive" href="/index.php">Blog</a>
+    <a class="inactive" href="/ds-portfolio.php">Portfolio</a>
     <a class="inactive" href="/courses.php">Courses</a>
     <a class="inactive" href="/exercises.php">Exercises</a>
     <div class="inactive dropdown">
