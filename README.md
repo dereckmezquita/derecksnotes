@@ -9,8 +9,8 @@ This repository is for tracking my personal website: [`www.derecksnotes.com`](ww
 This website features progressive web-app technologies and thus can prompt a user and then be installed locally on a phone. 
 
 <p align="center">
-    <img src="./siteImages/site-figures/site-capture-mobile.jpeg" width="250">
-    <img src="./siteImages/site-figures/site-capture-install.jpeg" width="250">
+    <img src="./siteImages/site-figures/site-capture-mobile.jpeg" width="350">
+    <img src="./siteImages/site-figures/site-capture-install.jpeg" width="350">
 </p>
 
 This website is built using the following technologies:
