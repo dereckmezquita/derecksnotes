@@ -1,0 +1,68 @@
+{
+    "entries": [
+        {
+            "name": "articlesWannerDatsenko",
+            "author": "Dereck de Mézquita",
+            "displayName": "Article: Wanner-Datsenko",
+            "image": "/siteImages/allPngs/51.png",
+            "date": {
+                "year": "2019",
+                "month": "05",
+                "day": "13"
+            },
+            "slogan": "Engineer life",
+            "summary": "This article was the first to demonstrate and use the &lambda; system for recombination. Now mostly a standard protocol known simply as &lambda;<sub>red</sub> recombination.",
+            "primaryTag": "Articles",
+            "tags": [
+                "Biology",
+                "Genetics",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "No"
+        },
+        {
+            "name": "bookGeneticEngineering",
+            "author": "Dereck de Mézquita",
+            "displayName": "Books: Genetic Engineering",
+            "image": "/siteImages/allPngs/53.png",
+            "date": {
+                "year": "2019",
+                "month": "05",
+                "day": "10"
+            },
+            "slogan": "Engineer life",
+            "summary": "Here are some books I've read on genetic engineering. This list is a work in progress, and I intend to add more to the list. Well these are the useful ones anyway.",
+            "primaryTag": "Books",
+            "tags": [
+                "Biology",
+                "Genetics",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "No"
+        },
+        {
+            "name": "bookMatlabBooks",
+            "author": "Dereck de Mézquita",
+            "displayName": "Books: Matlab Books",
+            "image": "/siteImages/allPngs/63.png",
+            "date": {
+                "year": "2019",
+                "month": "05",
+                "day": "10"
+            },
+            "slogan": "Machines do everything",
+            "summary": "Some books matlab gave away for free recently, covering machine learning; introduction to unsupervised learning.",
+            "primaryTag": "Books",
+            "tags": [
+                "Computer Science",
+                "Programming",
+                "Maths",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "No"
+        }
+    ]
+}
