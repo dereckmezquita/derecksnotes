@@ -1,8 +1,11 @@
+.DS_Store
+.versions
+temp
 **/*.zip
 sftp.json
 
-.DS_Store
-.versions
+ignored-files
+in-progress
 
 **/error_log
 
