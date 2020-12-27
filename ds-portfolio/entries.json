@@ -1,0 +1,28 @@
+{
+    "entries": [
+        {
+            "name": "ds-NLP-network-inference",
+            "author": "Dereck de Mézquita",
+            "displayName": "Data Science: natural language processing & network inference",
+            "image": "/siteImages/allPngs/610.png",
+            "date": {
+                "year": "2020",
+                "month": "12",
+                "day": "24"
+            },
+            "slogan": "Golden pink ring.",
+            "summary": "The goal of this project is to analyse chat data with my girlfriend; apply statistical methods, graph theory, and other data science techniques.",
+            "primaryTag": "Computer Science",
+            "tags": [
+                "Programming",
+                "Maths",
+                "Computer Science",
+                "Engineering",
+                "Biology",
+                "R"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        }
+    ]
+}
