@@ -6,8 +6,11 @@ sftp.json
 
 ignored-files
 in-progress
+in-progress.php
 
 **/error_log
+
+siteTools
 
 # History files
 .Rhistory
