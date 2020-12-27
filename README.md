@@ -1,4 +1,4 @@
-# derecksnotes <img src="./siteImages/site-figures/512derecksNotesLogo.png" width="75" align="right">
+# derecksnotes <img src="./siteImages/icons/512derecksNotesLogo.png" width="75" align="right">
 
 This repository is for tracking my personal website: [`www.derecksnotes.com`](www.derecksnotes.com). 
 
