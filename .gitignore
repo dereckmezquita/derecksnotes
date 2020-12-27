@@ -1,3 +1,10 @@
+**/*.zip
+
+.DS_Store
+.versions
+
+**/error_log
+
 # History files
 .Rhistory
 .Rapp.history

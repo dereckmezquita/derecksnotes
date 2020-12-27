@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1280 1280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,0.00795769,1.71406)">
+        <rect x="-1.139" y="-2.456" width="1281.87" height="1283.32" style="fill:white;"/>
+    </g>
+    <g transform="matrix(7.4547e-17,-1.21744,1.21744,7.4547e-17,-70.9942,1905.29)">
+        <path d="M669.161,214.867C877.592,214.868 1046.81,384.086 1046.81,592.516C1046.81,800.946 877.592,970.164 669.161,970.165L669.161,214.867Z" style="fill:none;stroke:black;stroke-width:5.48px;"/>
+    </g>
+    <path d="M190.596,1089.58L188.259,1089.58L188.259,166.551L214.62,166.551C711.93,180.706 1111.32,588.866 1111.32,1089.58L1110.13,1089.58C1109.56,836.302 903.765,630.852 650.361,630.852C649.783,630.852 649.205,630.853 648.627,630.855C648.629,630.277 648.63,629.699 648.63,629.121C648.63,375.369 442.012,166.551 188.259,166.551L188.864,1088.89C189.442,1088.89 190.02,1088.89 190.598,1088.88L190.597,1089.13L190.596,1089.58Z" style="fill:rgb(49,47,226);stroke:black;stroke-width:6.67px;"/>
+    <path d="M648.627,630.855C647.693,883.233 442.977,1087.95 190.598,1088.88C191.532,836.505 396.249,631.789 648.627,630.855Z" style="fill:rgb(49,47,226);stroke:black;stroke-width:6.67px;"/>
+    <g transform="matrix(0.910504,0,0,0.910504,8.72574,108.011)">
+        <text x="89.132px" y="1205.61px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:108.45px;">Prove that the area <tspan x="1035.69px 1102.04px 1132.17px " y="1205.61px 1205.61px 1205.61px ">A =</tspan> B</text>
+    </g>
+    <g transform="matrix(1,0,0,1,33.1772,-31.2474)">
+        <text x="321.104px" y="953.409px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:174.072px;fill:rgb(254,254,254);">A</text>
+    </g>
+    <g transform="matrix(1,0,0,1,382.403,-380.474)">
+        <text x="321.104px" y="953.409px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:174.072px;fill:white;">B</text>
+    </g>
+</svg>
