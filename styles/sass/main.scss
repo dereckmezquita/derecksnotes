@@ -1,0 +1,1155 @@
+/************************************************************************************************
+* THIS CSS DOCUMENT WAS PRODUCED BY USE OF SASS, IE THE LIVE SASS EXTENSION IN VSCODE WAS USED *
+************************************************************************************************/
+
+@import "modules";
+@import "classes";
+@import "uiElem";
+@import "nav";
+@import "sidebar";
+@import "seasonal";
+@import "illustrations";
+
+html {
+    font-size: 1.1em;
+    background: $background;
+
+    /* Lined grid */
+        background-size: 12px 12px;
+        background-image: linear-gradient(to right, $backgroundGrid 1px, transparent 1px), linear-gradient(to bottom, $backgroundGrid 1px, transparent 1px);
+
+        // box-shadow: $siteVignetting;
+
+    /* Dotted grid */
+        /* background-size: 10px 10px;
+        background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px); */
+}
+/* Works in conjuction with @media .wrapper to dynamically resize the screen to be apt for mobile devices */
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 1.15em;
+    }
+}
+
+body {
+    counter-reset: footnotes;
+    margin: 0px;
+}
+
+/* Unstyled wrapper if you want to have a styled/background wrapper for content use article or other element */
+    .wrapper {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+    }
+
+/* Works in conjuction with @media .html to dynamically resize the screen to be apt for mobile devices */
+    @media only screen and (max-width: 1024px) {
+        .wrapper {
+            width: 95%;
+        }
+    }
+
+    /* Written content backgrounds and styles */
+        .contentWrapper, .longContent {
+            width: 70%;
+            min-height: fit-content;
+            margin: 0 auto;
+            
+            padding-bottom: 15px;
+            position: relative;
+
+            background: $contentBackground;
+            border: 1px solid $border;
+            border-radius: 5px;
+
+            -webkit-box-shadow: 1px 1px 10px $shadow;
+            -moz-box-shadow: 1px 1px 10px $shadow;
+            box-shadow: 1px 1px 10px $shadow;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+
+        .longContent {
+            min-height: 1300px;
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .longContent {
+                min-height: 1325px;
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            .longContent {
+                min-height: 1425px;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .longContent {
+                min-height: 1625px;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .contentWrapper, .longContent {
+                width: 95%;
+            }
+        }
+
+        // Width here will increase the size of the article or the holder to be changed in conjuction with the sidebard class width in the sidebar scss
+        /* Article stylings */
+            article {
+                position: relative;
+                width: 60%;
+                min-height: fit-content;
+                margin-top: 30px;
+                margin-bottom: 40px;
+                margin-left: auto;
+                padding-bottom: 20px;
+                padding-right: 40px;
+                padding-left: 40px;
+
+                border-left: 1px dashed $border;
+
+                counter-reset: figcaptionCounter;
+
+                text-align: justify;
+                text-justify: auto;
+
+                // Deprecated now using JavaScript with the drop-text css class to style.
+                // > p:first-of-type::first-letter {
+                //     initial-letter: 3;
+                //     -webkit-initial-letter: 3;
+                //     color: $theme6;
+                //     padding: 2px;
+                // }
+            }
+        /* Resize article fit screen smaller devices, not 100% avoid the edges of wrappers, close 100% it occupies as much the screen */
+            @media only screen and (max-width: 1020px) {
+                article {
+                    width: 90%;
+                    padding: 0px;
+
+                    margin: auto;
+                    border-left:none;
+                }
+            }
+
+            .courseInfo {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .articleData {
+                color: $lightGray;
+                font-family: $roboto;
+                padding-top: 0px;
+                margin: 0px;
+                text-indent: 20px;
+                font-size: 15px;
+            }
+
+        .writtenWrapper {
+            padding: 0 30px 0 30px;
+        }
+
+        /* Allows to shift the text over to the left when smaller screen */
+        @media only screen and (max-width: 414px) {
+            .writtenWrapper {
+                padding-top: 0px;
+                padding-right: 5px;
+                padding-bottom: 0px;
+                padding-left: 5px;
+            }
+
+            .writtenWrapper ol {
+                padding-right: 10px;
+                padding-left: 25px;
+            }
+
+            .writtenWrapper > p {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+
+        // Deprecated now using JavaScript with the drop-text css class to style.
+        // .writtenWrapper > p:first-of-type:first-letter {
+        //     initial-letter: 2;
+        //     -webkit-initial-letter: 2;
+        //     color: $theme6;
+        //     padding: 3px;
+        // }
+
+
+
+/* Headings, text, custom styles for written words */
+    h1, h2, h3, h4, h5, h6, h7, h8 {
+        font-family: sans-serif;
+        text-align: left;
+        text-justify: none;
+    }
+
+    h1 {
+        color: $theme6;
+
+        font-size: 40px;
+        margin: 0px;
+        padding-top: 35px;
+        padding-bottom: 7.5px;
+        border-bottom: 1px solid $border;
+    }
+    h2 {
+        color: $theme5;
+        border-bottom: 1px solid $border;
+    }
+    h3 {
+        color: $theme4;
+        font-size: 1.5em;
+        border-bottom: 1px solid $border;
+    }
+    h4 {
+        color: $theme3;
+        font-size: 1.5em;
+        border-bottom: 1px solid $border;
+    }
+    h5 {
+        color: $gray;
+        font-size: 1.4em;
+        border-bottom: 1px solid $border;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    h6 {
+        color: $black;
+        font-size: 1.4em;
+        border-bottom: 1px dotted $border;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    h7 {
+        font-weight: 300;
+        color: $black;
+        font-size: 1.4em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .miniHeader {
+        font-family: $roboto;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: $theme4;
+        padding: 0px;
+        padding-top: 10px;
+        margin: 0px;
+        border-bottom: 2px $theme4 solid;
+        width: fit-content;
+    }
+    
+    .numHeadersCont {
+        counter-reset: quizQuestions;
+    }
+
+    .numHeaders {
+        font-family: $roboto;
+        font-weight: bold;
+        color: $black;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-justify: none;
+        text-align: left;
+
+        &:before {
+            content: counter(quizQuestions)'.';
+            counter-increment: quizQuestions;
+        }
+    }
+
+    a {
+        color: $theme6;
+
+        &:hover {
+            color: $lightGray;
+        }
+
+        &:active {
+            color: $themeActive !important;
+        }
+    }
+
+    .strikethrough {
+        text-decoration: line-through;
+    }
+
+    hr {
+        margin: 50px;
+    }
+
+    blockquote {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.9em;
+        color: #555;
+        line-height: 125%;
+        padding: 0 0 0 20px;
+        margin-left: 13px;
+        border-left: 3px solid $themeActive;
+    }
+
+    .quoteAuthor {
+        margin-left: 30px;
+        &::before {
+            content: "-";
+        }
+    }
+
+    code {
+        font-size: 1em;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-left: 5px;
+        border-left: 3px solid lightgreen;
+    }
+
+    button {
+        margin: 10px;
+        float: right;
+    }
+
+    input, textarea {
+        border: 1px solid $inputBorder;
+    }
+
+    input[type="checkbox"] {
+        display: inline-block;
+        position: relative;
+        margin: 10px;
+    }
+
+    label {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+
+        /* to add space before: */
+        &:before {
+            display: inline-block;
+            content: " ";
+            padding-top: 20px;
+        }
+
+        /* to add space after: */
+        // &:after {
+        //     display: block;
+        //     content: " ";
+        //     padding-bottom: 10px;
+        // }
+    }
+
+    .data-input {
+        font-family: "Roboto", sans-serif;
+        padding-top: 15px;
+    }
+
+    .calc-result {
+        font-family: "Robot", sans-serif;
+        color: $green;
+        font-weight: bold;
+    }
+
+    dl {
+        padding: 15px 15px 15px 20px;
+        margin-left: 7px;
+
+        background: $figureBackground;
+        border: 1px solid $figureBorder;
+        border-left: 3px solid $theme5;
+        -webkit-box-shadow: 1px 1px 7px $figureShadow;
+        -moz-box-shadow: 1px 1px 5px $figureShadow;
+        box-shadow: 1px 1px 7px $figureShadow;
+    }
+
+    dt {
+        padding-bottom: 5px;
+        color: $theme5;
+        font-weight: bold;
+    }
+
+    .quizQuestions {
+        counter-reset: quizQuestions;
+    }
+
+    .questions {
+        font-family: $roboto;
+        font-weight: bold;
+        color: $blue;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-justify: none;
+        text-align: left;
+
+        &:before {
+            content: counter(quizQuestions)'.';
+            counter-increment: quizQuestions;
+        }
+    }
+
+    .note, .warning {
+        font-family: $roboto;
+        font-size: 0.85em;
+        border-radius: 5px;
+        margin: 1.5rem auto;
+        padding: 1rem;
+        font-style: italic;
+
+        width: fit-content;
+
+        &::before {
+            content: "*";
+        }
+    }
+
+    .note {
+        border: 2px solid $lightGreen;
+        background: $greenBackground;
+    }
+
+    .warning {
+        background: $yellowBackground;
+        border: 2px solid $yellow;
+    }
+
+    /* Dictionary and more specific styles */
+        /* Targets the dictionary entry words */
+            a > strong {
+                color: $theme6; 
+            }
+
+        .dicList {
+            padding-left: 0px;
+        }
+
+        li > ul, li ul {
+            padding-left: 1em;
+            list-style-type: disc;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-bottom: 10px;
+        }
+        
+        // Check if this class is in use WARNING
+        .deepLi {
+            padding: 15px 15px 15px 40px;
+            margin-top: 30px;
+            margin-left: 7px;
+    
+            border-left: 3px solid $theme5;
+        }
+
+        // WARNING Possibly refactor to use normal header
+        .liHeader {
+            padding-bottom: 5px;
+            color: $theme5;
+            font-weight: bold;
+        }
+        
+        .dicSection {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .wordDefined {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+
+    /* Replace this footnotes system with javascript cause fuck it it's stupid; Hugo Giraudel thought it was genius lol yeah-right */
+        .foot-notes {
+            font-family: $roboto;
+            color: #666;
+            font-size: 13px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            border-top: 1px solid $border;
+            border-bottom: 1px solid $border;
+
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 40px;
+
+            &:target {
+                background: yellow !important;
+            }
+        }
+
+        .foot-notes-head {
+            font-size: 14px;
+            text-transform: uppercase;
+
+            margin-bottom: 7px;
+            margin-left: -35px;
+        }
+
+        a[aria-describedby="foot-label"] {
+            counter-increment: footnotes;
+            text-decoration: none;
+            color: inherit;
+            cursor: default;
+            outline: none;
+
+            &::after {
+                content: '[' counter(footnotes) ']';
+                vertical-align: super;
+                font-size: 0.5em;
+                margin-left: 2px;
+                color: $themeActive;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            &:focus::after {
+                outline: thin dotted;
+                outline-offset: 2px;
+            }
+        }
+
+        .smallNotes {
+            font-family: $roboto;
+            color: #666;
+            font-size: 12px;
+            padding: 0px;
+            margin: 0px;
+
+            &::before {
+                content: "*";
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 0px;
+            }
+        }
+
+// Images and other media styles
+    figure > img {
+        max-width: 100%;
+        display: block;
+        margin: auto;
+
+        padding: 7px;
+        background: $figureBackground;
+        border: 1px solid $figureBorder;
+        -webkit-box-shadow: 1px 1px 7px $figureShadow;
+        -moz-box-shadow: 1px 1px 5px $figureShadow;
+        box-shadow: 1px 1px 7px $figureShadow;
+    }
+
+    figure > a img {
+        max-width: 100%;
+        display: block;
+        margin: auto;
+
+        padding: 7px;
+        background: $figureBackground;
+        border: 1px solid $figureBorder;
+        -webkit-box-shadow: 1px 1px 7px $figureShadow;
+        -moz-box-shadow: 1px 1px 5px $figureShadow;
+        box-shadow: 1px 1px 7px $figureShadow;
+    }
+
+    article img {
+        max-width: 100%;
+        display: block;
+        margin: auto;
+
+        padding: 7px;
+        background: white;
+        border: 1px solid $figureBorder;
+        -webkit-box-shadow: 1px 1px 7px $figureShadow;
+        -moz-box-shadow: 1px 1px 5px $figureShadow;
+        box-shadow: 1px 1px 7px $figureShadow;
+    }
+
+        /* works with figcaption in order to count the fig tags on the page, can be used with headings in the future */
+            figcaption {
+                padding-bottom: 10px;
+                text-align: right;
+
+                margin-top: 15px;
+                font-size: 0.8em;
+
+                &:before {
+                    content: "Figure " counter(figcaptionCounter) ":\0000a0\0000a0";
+                    counter-increment: figcaptionCounter;
+                }
+            }
+
+    iframe {
+        display: block;
+        margin: 25px auto;
+        padding: 7px;
+
+        background: $figureBackground;
+        border: 1px solid $figureBorder;
+        -webkit-box-shadow: 1px 1px 7px $figureShadow;
+        -moz-box-shadow: 1px 1px 5px $figureShadow;
+        box-shadow: 1px 1px 7px $figureShadow;
+    }
+
+    @media only screen and (max-width: 1350px) {
+        iframe {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 414px) {
+        iframe {
+            width: 95%;
+            height: 15%;
+        }
+    }
+
+    .embedPdf {
+        display: block;
+        margin: 20px auto;
+        width: 80%;
+        height: 60%;
+
+        padding: 7px;
+        background: $figureBackground;
+        border: 1px solid $figureBorder;
+        -webkit-box-shadow: 1px 1px 7px $figureShadow;
+        -moz-box-shadow: 1px 1px 5px $figureShadow;
+        box-shadow: 1px 1px 7px $figureShadow;
+    }
+
+     /* Tables */
+        table {
+            position: relative;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            border-collapse: collapse;
+
+            position: relative;
+
+            display: table-cell;
+            vertical-align: middle;
+
+            background: $figureBackground;
+            border: 1px solid $figureBorder;
+            -webkit-box-shadow: 1px 1px 7px $figureShadow;
+            -moz-box-shadow: 1px 1px 5px $figureShadow;
+            box-shadow: 1px 1px 7px $figureShadow;
+        }
+
+        @media only screen and (max-width: 414px) {
+            table {
+                font-size: 13px;
+                margin-left: -25px;
+            }
+        }
+
+        th {
+            border: 1px solid $figureBorder;
+            padding: 5px;
+        }
+
+        td {
+            padding: 5px;
+            text-align: center;
+            border: 1px solid $figureBorder;
+        }
+
+        .tableHeader {
+            font-family: sans-serif;
+            text-align: center;
+            border: 1px solid $figureBorder;
+            padding: 10px;
+            color: $theme6;
+        }
+
+        .verticalTableHeader {
+            transform: rotate(-90deg)
+        }
+
+    video {
+        max-width: 70%;
+
+        display: block;
+        margin: auto;
+
+        padding: 7px;
+        background: $figureBackground;
+        border: 1px solid $figureBorder;
+        -webkit-box-shadow: 1px 1px 7px $figureShadow;
+        -moz-box-shadow: 1px 1px 5px $figureShadow;
+        box-shadow: 1px 1px 7px $figureShadow;
+    }
+        
+/* Footer */
+    footer {
+        position: relative;
+        border-top: 2px solid $lightGray;
+        padding-top: 10px;
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 55%;
+        color: $lightGray;
+        font-size: 13px;
+        text-align: center;
+        > p {
+            line-height: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        footer {
+            width: 90%;
+        }
+    }
+
+    footer:hover {
+        color: black;
+        border-top: 2px solid $theme6;
+    }
+
+    /* Qr codes for donations */
+        /* Custom texts and other misc written styles */
+        .cryptoAddress {
+            font-family: $roboto;
+            color: $blue;
+        }
+
+        .cryptoAddress:hover {
+            color: $lightBlue;
+        }
+
+        footer .cryptoAddress {
+            color: $lightGray;
+        }
+
+        .miniCrypto {
+            max-width: 15px;
+            display: inline-block;
+            margin-bottom: 0px;
+        }
+
+/* Header styles including title and homelink */
+    header {
+        padding-top: 40px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .homePageLink {
+        text-decoration: none;
+        display: block;
+
+        width: fit-content;
+        margin: auto;
+    }
+
+    .headerEst, .headerSlogan {
+        color: $black;
+    }
+
+    .headerEst {
+        font-family: $cursive;
+        display: block;
+        font-style: italic;
+        font-size: 27.5px;
+        padding-top: 10px;
+
+        line-height: 22.5px;
+    }
+    
+    .headerSlogan {
+        font-size: 17px;
+        display: block;
+        text-transform: uppercase;
+        transform: scale(0.955, 1);
+        line-height: 27.5px;
+    }
+
+    .headerSlogan, .headerEst {
+        text-shadow: -5px 5px 5px $shadow;
+    }
+
+    .headerSlogan:hover, .headerEst:hover {
+        text-shadow: -5px 5px 20px rgba(153, 153, 153, 1);
+    }
+
+    .headerSiteName {
+        font-family: $blockLetter;
+        display: inline-block;
+        text-transform: uppercase;
+        
+        color: $theme6;
+
+        font-size: 42.5px;
+        transform: scale(1.35, 1.3);
+        line-height: 57px;
+    }
+
+    .headerSiteName {
+        text-shadow: -5px 5px 10px rgba(153, 153, 153, 0.4);
+    }
+
+    .headerSiteName:hover {
+        text-shadow: -5px 5px 15px rgba(153, 153, 153, 0.9);
+        color: $black;
+    }
+
+    .headerAuthorTitle {
+        text-transform: lowercase;
+    }
+
+    /* Resize the logos for smaller screens */
+    @media only screen and (max-width: 414px) {
+        .headerSlogan {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 370px) {
+        .headerSlogan {
+            font-size: 14px;
+        }
+
+        .headerSiteName {
+            font-size: 37px;
+        }
+    }
+
+/* Display blog entries as cards, works in conjunction with JS to create DOM elements */
+    .entries {
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+
+        grid-gap: 20px;
+    }
+
+    .card {
+        text-decoration: none;
+        color: $black;
+        cursor: pointer;
+        padding: 15px;
+        background-color: $cardBackground;
+
+        border: 1px solid $border;
+        border-radius: 5px;
+    
+        -webkit-box-shadow: 1px 1px 10px $shadow, $cardVignetting;
+        -moz-box-shadow: 1px 1px 10px $shadow, $cardVignetting;
+        box-shadow: 1px 1px 10px $shadow, $cardVignetting;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+
+        &:hover {
+            color: $black;
+            background-color: $cardBackgroundHover;
+            -webkit-box-shadow: 1px 1px 20px rgba(153, 153, 153, 0.8), $cardVignetting;
+            -moz-box-shadow: 1px 1px 20px rgba(153, 153, 153, 0.8), $cardVignetting;
+            box-shadow: 1px 1px 20px rgba(153, 153, 153, 0.8), $cardVignetting;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+
+        &:active {
+            color: $black !important;
+        }
+    }
+
+    /* Styles for the texts and image inside the cards */
+        .entryData {
+            text-align: center;
+        }
+
+        .entrySlogan, .entryAuthor {
+            font-size: 14px;
+            color: $lightGray;
+            font-style: italic;
+            padding-bottom: 5px;
+
+            &:hover {
+                color: $theme6;
+            }
+        }
+
+        .entryName {
+            font-size: 15px;
+            text-transform: uppercase;
+            font-variant: small-caps;
+            padding-bottom: 5px;
+        }
+
+        .entryImg {
+            display: block;
+            margin: auto;
+            max-height: 140px;
+            max-width: 90%;
+
+            -webkit-filter: $sepiaFilter; /* Safari 6.0 - 9.0 */
+            filter: $sepiaFilter;
+        }
+
+        .entrySummary {
+            font-size: 13px;
+            text-align: left;
+            text-justify: none;
+
+            // Deprecated now using JavaScript with the drop-text css class to style.
+            // &::first-letter {
+            //     initial-letter: 3;
+            //     -webkit-initial-letter: 3;
+            //     color: $theme6;
+            //     padding: 2px;
+            // }
+        }
+
+        .entryDate {
+            display: inline;
+            padding-left: 5px;
+            color: $theme6;
+        }
+
+/* Scroll up button */
+    .scrollUp {
+        width: 50px;
+        height: 50px;
+        opacity: 0.3;
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        display: none;
+        background: url('/siteImages/icons/arrowUp.svg') no-repeat;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        > span {
+            display: none;
+        }
+    }
+
+/* Dictionary directory */
+    .directory {
+        font-family: "Helvetica";
+        display: block;
+        position: relative;
+
+        padding-top: 20px;
+
+        table {
+            font-weight: bold;
+    
+            margin: auto;
+    
+            border-radius: 5px;
+            font-size: 40px;
+            border-collapse: separate;
+            border-spacing: 2px;
+            padding: 5px;
+    
+            background: $figureBackground;
+            border: 1px solid $figureBorder;
+            -webkit-box-shadow: 1px 1px 7px $figureShadow;
+            -moz-box-shadow: 1px 1px 5px $figureShadow;
+            box-shadow: 1px 1px 7px $figureShadow;
+        }
+
+        tr td {
+            border: none;
+            padding: 0px;
+        }
+
+        td {
+            padding: 10px;
+            
+            max-width: 34px;
+            min-width: 34px;
+            text-align: center;
+            border-radius: 5px;
+    
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+        }
+
+        td a {
+            color: $theme4;
+        }
+
+        // td[head] {
+        //     background-color: rgba(65, 65, 65,1) !important;
+        //     font-size: 16px;
+        //     padding: 2px;
+        //     cursor: grab !important;
+        // }
+
+        // td[head]:active {
+        //     cursor: grabbing !important;
+        // }
+
+        td:hover {
+            background-color: #f44242;
+            cursor: pointer;
+        }
+
+        td:active {
+            background-color: #d40e0e;
+        }
+
+        // td.noun:hover {
+        //     background-color: #f44242 !important;
+        // }
+
+        // td.noun:active {
+        //     background-color: #d40e0e !important;
+        // }
+    }
+
+
+    /* This will center and resize the dictionary directory to be responsive 834px because that's the following smaller ipad, want this to apply only (excluding 12.9) smaller devices */
+        @media only screen and (max-width: 834px) {
+            .directory table {
+                font-size: 30px;
+            }
+        }
+
+    /* This will center and resize the dictionary directory to be responsive 834px because that's the following smaller ipad, want this to apply only (excluding 12.9) smaller devices */
+        @media only screen and (max-width: 320px) {
+            .directory table {
+                font-size: 25px;
+            }
+        }
+
+    .directoryBody tr td a {
+        text-decoration: none;
+        display: block;
+    }
+
+    /* This will center and resize the dictionary directory to be responsive */
+        @media only screen and (max-width: 834px) {
+            .directory td {
+                max-width: 27px;
+            }
+        }
+
+    /* This will center and resize the dictionary directory to be responsive */
+        @media only screen and (max-width: 320px) {
+            .directory td {
+                max-width: 20px;
+            }
+        }
+
+    // td.noun a {
+    //     color: $theme6 !important;
+    // }
+
+/* JavaScript and libraries associated CSS */
+    /* Reveal content */
+        /* Style the button that is used to open and close the collapsible content */
+        .collapsible {
+            font-weight: bold;
+            font-size: 25px;
+            color: $theme6;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: center;
+
+            background-color: $white;
+
+            border: 1px solid $border;
+            border-radius: 5px;
+        
+            -webkit-box-shadow: 1px 1px 10px $shadow;
+            -moz-box-shadow: 1px 1px 10px $shadow;
+            box-shadow: 1px 1px 10px $shadow;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active, .collapsible:hover {
+            background-color: $darkGray;
+        }
+        
+        /* Style the collapsible content. Note: hidden by default */
+        .collapseContent {
+            padding: 0 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: none;
+            overflow: hidden;
+            background-color: $figureBackground;
+
+            border: 1px solid $border;
+            border-radius: 5px;
+        
+            -webkit-box-shadow: 1px 1px 10px $shadow;
+            -moz-box-shadow: 1px 1px 10px $shadow;
+            box-shadow: 1px 1px 10px $shadow;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+
+    /* MathJax Styles */
+        @media only screen and (max-width: 414px) {
+            .mathsFormulas {
+                font-size: 10px;
+            }
+        }
+
+    .smallMathsFormulas {
+        font-size: 0.9em;
+    }
+
+    /* Works with js function in script.js used for enlarging the first letter of every word, add class="each-word" to target text */
+    .drop-text {
+        color: $theme6;
+        float: left;
+        // font-family: Georgia;
+        font-size: 55px;
+        line-height: 40px;
+        padding-top: 5px;
+        padding-right: 8px;
+        padding-left: 3px;
+        margin-bottom: -8px;
+    }
+
+/* Misc styles and additions */
+
+// .workProgress:before {
+//     font-family: $roboto;
+//     font-size: 50px;
+//     font-weight: bold;
+//     color: $red;
+//     margin-top: 50px;
+
+//     border-top: 2px solid $border;
+//     content: 'Work in progress...';
+// }

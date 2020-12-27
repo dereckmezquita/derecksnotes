@@ -1,0 +1,47 @@
+    #illustration-flow {
+        @extend .centre;
+        padding: 20px;
+        background: $figureBackground;
+        border: 1px solid $figureBorder;
+    }
+    .illustration-flow-text {
+        display: inline;
+        padding: 0px;
+        text-align: center;
+
+        text-shadow: 2px 2px 30px black;
+
+        letter-spacing: -0.05em;
+        /* font-family: "Roboto", sans-serif; */
+        font-family: "Fjalla One", sans-serif;
+        font-weight: bolder;
+        font-size: 20px;
+        -webkit-transform: scale(1.35, 1.3);
+        transform: scale(1.35, 1.3);
+    }
+    .illustration-colour-one {
+        color: red;
+    }
+    .illustration-colour-two {
+        color: orange;
+    }
+    .illustration-colour-three {
+        color: yellow;
+    }
+    .illustration-colour-four {
+        color: green;
+    }
+    .illustration-colour-five {
+        color: blue;
+    }
+    .illustration-colour-six {
+        color: indigo;
+    }
+    .illustration-colour-seven {
+        color: violet;
+    }
+
+    .illustration-arrow {
+        color: grey;
+        padding: 0px;
+    }

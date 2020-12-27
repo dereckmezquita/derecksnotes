@@ -1,0 +1,197 @@
+/* Information bar styles goes above the header etc */
+.infoBar {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+
+    width: 100%;
+    background: $promptBackground;
+    overflow: hidden;
+
+    -webkit-box-shadow: 1px 1px 10px $shadow;
+    -moz-box-shadow: 1px 1px 10px $shadow;
+    box-shadow: 1px 1px 10px $shadow;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.tickers {
+    position: absolute;
+    top: 25%;
+
+    height: 100%;
+    float: left;
+    margin: auto;
+    padding-left: 5px;
+}
+
+.infobarTools {
+    float: right;
+    padding-right: 10px;
+    margin: auto;
+}
+
+.infobarIcon {
+    padding: 7px;
+    float: left;
+    cursor: pointer;
+    
+    &:hover {
+        background: $theme6;
+    }
+}
+
+.infobarDisplay {
+    float: left;
+    padding: 10px;
+}
+
+.infobarItem {
+    padding: 10px;
+
+    &:hover{
+        background: $theme6;
+        color: $white;
+    }
+}
+
+.btc, .dgb, .xmr {
+    padding-left: 3px;
+    color: $black;
+}
+
+@media only screen and (max-width: 525px) {
+    .dgb, .xmr {
+        visibility: hidden;
+    }
+}
+
+.coinPct {
+    font-weight: bold;
+    color: $white;
+    margin-left: 3px;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;
+}
+
+/* PWA Install app notification */
+.pwaPromptContainer {
+    position: fixed;
+    z-index: 10;
+    bottom: 15px;
+    width: 100%;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.pwaBubble {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: $black;
+    position: relative;
+    display: flex;
+    width: 85%;
+    margin: auto;
+
+    padding: 20px;
+    border-radius: 10px;
+    background: $promptBackground;
+
+    -webkit-box-shadow: 1px 1px 10px $shadow;
+    -moz-box-shadow: 1px 1px 10px $shadow;
+    box-shadow: 1px 1px 10px $shadow;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#pwaPlusCont{
+    flex: 0 0 10%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.pwaPlusIcon {
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 10px;
+}
+
+#pwaTextCont {
+    flex: 1;
+    margin: 0px;
+    margin-top: -10px;
+    padding: 0px;
+}
+
+.pwaActionIcon {
+    height: 25px;
+}
+
+/* PWA guide after installation */
+.pwaGuide {
+    position: fixed;
+    z-index: 10;
+    bottom: 15px;
+    width: 100%;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.guideCont {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: $black;
+    position: relative;
+    display: flex;
+    width: 85%;
+    margin: auto;
+
+    padding: 20px;
+    border-radius: 10px;
+    background: $promptBackground;
+
+    -webkit-box-shadow: 1px 1px 10px $shadow;
+    -moz-box-shadow: 1px 1px 10px $shadow;
+    box-shadow: 1px 1px 10px $shadow;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Extra tools interface */
+.extras {
+    position: fixed;
+    z-index: 10;
+    bottom: 15px;
+    width: 100%;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.extrasBubble {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: $black;
+    position: relative;
+    display: flex;
+    width: 85%;
+    margin: auto;
+
+    padding: 20px;
+    border-radius: 10px;
+    background: $promptBackground;
+
+    -webkit-box-shadow: 1px 1px 10px $shadow;
+    -moz-box-shadow: 1px 1px 10px $shadow;
+    box-shadow: 1px 1px 10px $shadow;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}

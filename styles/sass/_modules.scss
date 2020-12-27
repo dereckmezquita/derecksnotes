@@ -1,0 +1,134 @@
+/**********************************
+* INSTALLED FONTS, GOOGLE FONTS, *
+**********************************/
+// $font-family-one: "Roboto";
+// $font-family-two: "Fjalla One";
+// $font-family-three: "Tangerine", cursive;
+
+/**************************
+* COLOURS/THEME SETTINGS *
+**************************/
+// Fonts
+    $roboto: "Roboto", sans-serif;
+    $cursive: "Tangerine", cursive;
+    $blockLetter: 'Fjalla One', sans-serif;
+
+// Font colours
+    // $theme11: #234d80;
+    // $theme10: #2a5c9a;
+    // $theme9: #316cb3;
+    // $theme8: #3c7bc9;
+    // $theme7: #558dd1;
+
+    // $theme6: #6f9fd8;
+    // $theme5: #8cb1df;
+    // $theme4: #a9c5e7;
+    // $theme3: #c5d8ef;
+    // $theme2: #e2ecf7;
+    // $theme1: #f6f9fd;
+
+    // $theme11: #004040;
+    // $theme10: #004d4d;
+    // $theme9: #005959;
+    // $theme8: #006666;
+    // $theme7: #007373;
+
+    // $theme6: #008080;
+    // $theme5: #00cccc;
+    // $theme4: #1affff;
+    // $theme3: #66ffff;
+    // $theme2: #b3ffff;
+    // $theme1: #e8ffff;
+
+    $theme11: #000000;
+    $theme10: #001a00;
+    $theme9: #003300;
+    $theme8: #004d00;
+    $theme7: #006600;
+
+    $theme6: #008000;
+    $theme5: #009900;
+    $theme4: #00b300;
+    $theme3: #00cc00;
+    $theme2: #00e600;
+    $theme1: #00ff00;
+
+    // $theme11: #5d0c10;
+    // $theme10: #6f0e13;
+    // $theme9: #821116;
+    // $theme8: #94131a;
+    // $theme7: #a7161d;
+
+    // $theme6: #ba1820;
+    // $theme5: #e32a33;
+    // $theme4: #ea5f66;
+    // $theme3: #f19499;
+    // $theme2: #f8cacc;
+    // $theme1: #fdeff0;
+
+    $themeActive: #d0656a;
+
+    // Other colours
+        $red: red;
+
+        $blue: #0082FF;
+        $lightBlue: #4286f4;
+
+        $yellow: #f0d461;
+        $yellowBackground: #fcf7e3;
+
+        $green: #4DD964;
+        $lightGreen: #82f061;
+        $greenBackground: #e3fce4;
+
+        $darkGray: #666;
+        $gray: gray;
+        $lightGray: #999;
+
+        $inputBorder: #737373;
+
+        $black: black;
+        $white: white;
+
+// Background, border and other element colours
+    // $border: #CCC;
+    // $shadow: rgba(153, 153, 153, 0.5);
+
+    // $background: rgb(255, 255, 255);
+    // $backgroundGrid: rgb(240, 240, 240);
+    // $contentBackground: rgba(255, 255, 255, 0.65);
+    // $contentBackgroundSolid: rgba(255, 255, 255, 1);
+    // $promptBackground: rgba(255, 255, 255, 0.3);
+
+    // $siteVignetting: 0 0 75px rgba(100, 100, 100, 0.3) inset;
+
+    // $cardVignetting: 0 0 0px rgba(100, 100, 100, 0.5) inset;
+
+    // $cardBackground: rgba(255, 255, 255, 0.55);
+    // $cardBackgroundHover:rgba(255, 255, 255, 1);
+    // $sepiaFilter: sepia(0%);
+
+    // $figureBackground: rgb(255, 250, 250);
+    // $figureBorder: #DDD;
+    // $figureShadow: rgba(153, 153, 153, 0.2);
+
+// Sepia version of site
+    $border: #CCC;
+    $shadow: rgba(153, 153, 153, 0.5);
+
+    $background: rgb(255, 255, 255);
+    $backgroundGrid: rgb(240, 240, 240);
+    $contentBackground: rgba(255, 255, 255, 0.65);
+    $contentBackgroundSolid: rgba(255, 255, 255, 1);
+    $promptBackground: rgba(255, 255, 255, 0.3);
+
+    $siteVignetting: 0 0 50px rgba(100, 100, 40, 0.8) inset;
+    $cardVignetting: 0 0 20px rgba(100, 100, 40, 0.2) inset;
+
+    $cardBackground: rgba(255, 255, 255, 0.55);
+    $cardBackgroundHover:rgba(255, 255, 255, 1);
+    $sepiaFilter: sepia(10%);
+
+    $figureBackground: rgb(255, 255, 255);
+    $figureBorder: #DDD;
+    $figureShadow: rgba(153, 153, 153, 0.2);

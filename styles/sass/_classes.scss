@@ -1,0 +1,21 @@
+// Generalised abstract styles
+.float-left {
+    float: left !important;
+}
+
+.table-text-align-left *:not(code) {
+    text-align: left;
+    padding-left: 15px;
+    margin-left: 15px;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.centre {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+}
