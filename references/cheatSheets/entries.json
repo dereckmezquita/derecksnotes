@@ -1,0 +1,38 @@
+{
+    "entries": [
+        {
+            "name": "mathsSymbols",
+            "author": "Dereck de Mézquita",
+            "displayName": "Mathematical Symbolology",
+            "image": "/siteImages/allPngs/521.png",
+            "date": {
+                "year": "2019",
+                "month": "02",
+                "day": "28"
+            },
+            "slogan": "Assez complexe pour fumer.",
+            "summary": "Here you'll find a basic list of maths symbols which are widely used, and often times found in science.",
+            "primaryTag": "CheetSheet",
+            "tags": ["Maths", "Science"],
+            "likes": 0,
+            "published": "No"
+        },
+        {
+            "name": "mathsUnivSheet",
+            "author": "Dereck de Mézquita",
+            "displayName": "Universal Maths Reference Sheet",
+            "image": "/siteImages/allPngs/160.png",
+            "date": {
+                "year": "2019",
+                "month": "02",
+                "day": "28"
+            },
+            "slogan": "Trop complexe pour fumer.",
+            "summary": "A mostly complete list of useful formulas and other references for mathematics..",
+            "primaryTag": "CheetSheet",
+            "tags": ["Maths", "Science"],
+            "likes": 0,
+            "published": "No"
+        }
+    ]
+}
