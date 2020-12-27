@@ -1,0 +1,197 @@
+{
+    "entries": [
+        {
+            "name": "originsRep",
+            "author": "Dereck de Mézquita",
+            "displayName": "Common antibiotics",
+            "image": "/siteImages/allPngs/382.png",
+            "date": {
+                "year": "2019",
+                "month": "06",
+                "day": "27"
+            },
+            "slogan": "Zappy zap and blue.",
+            "summary": "Common origins of replication used in <em>E. coli</em>. Never put two plasmids with the same origin of replication in the same cell.",
+            "primaryTag": "Biotech",
+            "tags": [
+                "Biology",
+                "Microbiology",
+                "Reference",
+                "List"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "antibiotics",
+            "author": "Dereck de Mézquita",
+            "displayName": "Common antibiotics",
+            "image": "/siteImages/allPngs/514.png",
+            "date": {
+                "year": "2019",
+                "month": "06",
+                "day": "27"
+            },
+            "slogan": "Zappy zap and blue.",
+            "summary": "Common antibiotics used in biology and microbiology.",
+            "primaryTag": "Biotech",
+            "tags": [
+                "Biology",
+                "Microbiology",
+                "Reference",
+                "List"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "statisticsTables",
+            "author": "Dereck de Mézquita",
+            "displayName": "Statistics Tables",
+            "image": "/siteImages/allPngs/107.png",
+            "date": {
+                "year": "2019",
+                "month": "06",
+                "day": "15"
+            },
+            "slogan": "Probas and numbers",
+            "summary": "Useful tables for statistics.",
+            "primaryTag": "Maths",
+            "tags": [
+                "Reference",
+                "List"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "chemTables",
+            "author": "Dereck de Mézquita",
+            "displayName": "Various Tables on Chemistry",
+            "image": "/siteImages/allPngs/106.png",
+            "date": {
+                "year": "2019",
+                "month": "05",
+                "day": "02"
+            },
+            "slogan": "Chem = more stuff!",
+            "summary": "Various tables on chemistry, from NMR spectra to, titration; not by me.",
+            "primaryTag": "Chemistry",
+            "tags": [
+                "Reference",
+                "List"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "codonTable",
+            "author": "Dereck de Mézquita",
+            "displayName": "Codon Table",
+            "image": "/siteImages/allPngs/64.png",
+            "date": {
+                "year": "2019",
+                "month": "05",
+                "day": "02"
+            },
+            "slogan": "L34rn 2 l33t 5p3ak!",
+            "summary": "Codons to amino acids table.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Genetics",
+                "Biology",
+                "Reference",
+                "Biology",
+                "Amino Acid",
+                "List",
+                "Protein"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "periodicTables",
+            "author": "Dereck de Mézquita",
+            "displayName": "Various Useful Periodic Tables",
+            "image": "/siteImages/allPngs/66.png",
+            "date": {
+                "year": "2019",
+                "month": "05",
+                "day": "02"
+            },
+            "slogan": "Gotta catch'em all!",
+            "summary": "Various periodic tables, a couple standard, others by electronegativity or thermal characteristics.",
+            "primaryTag": "Physics",
+            "tags": [
+                "Physics",
+                "Chemistry",
+                "Biology",
+                "Reference",
+                "Biology",
+                "Amino Acid",
+                "List",
+                "Protein"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "aminoAcids",
+            "author": "Dereck de Mézquita",
+            "displayName": "Amino Acids & Amino Acid Codes",
+            "image": "/siteImages/allPngs/132.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Guilty, chain them up & add glucose.",
+            "summary": "A table of amino acids, and their corresponding codes.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Reference",
+                "Biology",
+                "Amino Acid",
+                "List",
+                "Protein"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "commonChemicals",
+            "author": "Dereck de Mézquita",
+            "displayName": "List of Common Chemicals",
+            "image": "/siteImages/allPngs/43.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Chemical smoke, don't breathe this.",
+            "summary": "A list of common chemical reagents, their common name, chemical name, formula, and molar mass.",
+            "primaryTag": "Chemistry",
+            "tags": [
+                "Reference",
+                "Chemistry",
+                "Chemicals",
+                "List"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "restrictionEnzymes",
+            "author": "Dereck de Mézquita",
+            "displayName": "Common Restriction Enzymes",
+            "image": "/siteImages/allPngs/23.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Not guilty... release them!",
+            "summary": "A list of common restriction enzymes and their corresponding restriction sites.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Reference",
+                "Biology",
+                "Enzymes",
+                "List"
+            ],
+            "likes": 0
+        }
+    ]
+}
