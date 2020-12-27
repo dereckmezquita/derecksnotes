@@ -1,0 +1,417 @@
+{
+    "entries": [
+        {
+            "name": "cultureBacteria",
+            "author": "Dereck de Mézquita",
+            "displayName": "Bacterial cultures",
+            "image": "/siteImages/allPngs/150.png",
+            "date": {
+                "year": "2019",
+                "month": "04",
+                "day": "01"
+            },
+            "slogan": "The law check ins the attempt.",
+            "summary": "For micro-organisms to be able to grow, a grow culture must satisfy all of the following requirements.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Culture",
+                "Biology",
+                "Science",
+                "Growth",
+                "Microbiology",
+                "Bacteria"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "conjugation",
+            "author": "Dereck de Mézquita",
+            "displayName": "Bacterial Conjugation",
+            "image": "/siteImages/allPngs/43.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "The law check ins the attempt.",
+            "summary": "For this process we will try to get one plasmid to pass into another strain. This can be done for different reasons including: testing conjugative capacity, and preparing for a &lambda;<sub>red</sub> recombination.",
+            "primaryTag": "Biology",
+            "tags": [
+                "DNA",
+                "Biology",
+                "Science",
+                "DNA Transfer",
+                "Microbiology",
+                "Bacteria",
+                "DNA Transfer"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "cultureLb",
+            "author": "Dereck de Mézquita",
+            "displayName": "Lysogeny Broth Culture",
+            "image": "/siteImages/allPngs/24.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "The start extends the plant.",
+            "summary": "This procedure is done in order to amplify the <a href=\"/dictionaries/dicBiology.php#BDic_Biomass\">biomass</a> of a single bacterial <a href=\"/dictionaries/dicBiology.php#BDic_Clone\">clone</a>.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Growth"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "dnaDigestionPlasmid",
+            "author": "Dereck de Mézquita",
+            "displayName": "Plasmid Digestion",
+            "image": "/siteImages/allPngs/63.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "The ice transforms the disease.",
+            "summary": "Here we will take a plasmid, pAPT110 as an example, and cut it with the Nhe1 restriction enzyme.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Plasmid",
+                "Digestion",
+                "DNA",
+                "DNA Manipulation"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "dnaDigestionReligation",
+            "author": "Dereck de Mézquita",
+            "displayName": "Plasmid Digestion/Religation",
+            "image": "/siteImages/allPngs/85.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "The meal familiarizes the interesting sugar.",
+            "summary": "The cutting and closing of a bacterial plasmid.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Plasmid",
+                "Digestion",
+                "DNA",
+                "DNA Manipulation"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "dnaExtraction",
+            "author": "Dereck de Mézquita",
+            "displayName": "DNA Extraction",
+            "image": "/siteImages/allPngs/18.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "The abounding belief enters the father.",
+            "summary": "DNA Extraction E.Z.N.A. Plasmid DNA Mini Kit.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Plasmid",
+                "DNA",
+                "DNA Extraction"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "dnaSequencing",
+            "author": "Dereck de Mézquita",
+            "displayName": "DNA Sequencing",
+            "image": "/siteImages/allPngs/2.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "The experience delegates the touch.",
+            "summary": "The sequencing process is done by extension of the DNA matrix with our included primers. The sequence information is collected by Sanger sequencing.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Plasmid",
+                "DNA",
+                "Electrophoresis",
+                "Analysis"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "electroGelPurification",
+            "author": "Dereck de Mézquita",
+            "displayName": "Electrophoresis Gel Purification",
+            "image": "/siteImages/allPngs/116.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Why does the unsuitable peace impart the sign?",
+            "summary": "Electrophoretic gel purification is a standard electrophoretic assay to migrate DNA in a gel, however after migration is complete we recover and purify specific bands of DNA based on their size.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Plasmid",
+                "DNA",
+                "Electrophoresis",
+                "DNA Extraction"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "electrophoresis",
+            "author": "Dereck de Mézquita",
+            "displayName": "Electrophoresis",
+            "image": "/siteImages/allPngs/113.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Show them your volts.",
+            "summary": "Here you will find a detailed protocol on electropheretic gel migration. Electropheresis is the process of migrating a sample in a gel. To do this protocol one needs the following at their disposal:",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Plasmid",
+                "DNA",
+                "Electrophoresis",
+                "DNA Extraction",
+                "Analysis"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "glycerolStockPrep",
+            "author": "Dereck de Mézquita",
+            "displayName": "Glycerol Stock Preparation",
+            "image": "/siteImages/allPngs/101.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "slog",
+            "summary": "Glycerol stock prep allows us to store bacterial strains for the long term. In order to do this we must work in sterile conditions and place them into an innert/nutritive environment.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Storage"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "pcr",
+            "author": "Dereck de Mézquita",
+            "displayName": "Polymerase Chain Reaction (PCR)",
+            "image": "/siteImages/allPngs/209.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Increase exponentially.",
+            "summary": "This protocol will allow you to amplify desired sequences, by use of specific primers, and a thermocycler. This allows us to have these sequences in greater quantities and allow us future experiments.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "PCR",
+                "DNA",
+                "DNA Extraction",
+                "DNA Transfer"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "petriDishPrep",
+            "author": "Dereck de Mézquita",
+            "displayName": "Petri Dish Preparation",
+            "image": "/siteImages/allPngs/210.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "These dishes were made for growing...",
+            "summary": "Petri dish preparation allows us to create dishes of nutrient rich gel. These gels can then be used to grow bacterial strains on for testing/experimentation in the lab.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Petri Dish",
+                "Growth"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "petriDishSmear",
+            "author": "Dereck de Mézquita",
+            "displayName": "Petri Dish Smears",
+            "image": "/siteImages/allPngs/217.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "...and grow is what they'll do...",
+            "summary": "Petri dish smears should follow a specific protocol. This in order to evenly spread the cells over a nutrient rich gel. Depending on what is being done we could be trying to isolate certain strains or just test them against an antibiotic.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Petri Dish",
+                "Growth"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "petriDishSubcloning",
+            "author": "Dereck de Mézquita",
+            "displayName": "Subcloning Bacterial Colonies",
+            "image": "/siteImages/allPngs/215.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "..they're gonna grow all over you.",
+            "summary": "Subcloning can be done for a variety of reasons, here are just two: testing antibiotic resistances for a certain strain, and wanting to smear a strain in order to obtain isolated colonies.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Petri Dish",
+                "Growth"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "recombinationInFusion",
+            "author": "Dereck de Mézquita",
+            "displayName": "InFusion DNA Recombination",
+            "image": "/siteImages/allPngs/212.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Breaking and modifying!",
+            "summary": "Recombination by InFusion allows for the insertion of PCR fragments or other DNA fragments into a plasmid; all this without having to linearise the plasmid. Moreover InFusion allows for the insertion of multiple sequences at once, and it all takes about 1h.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Recombination",
+                "DNA",
+                "Primers",
+                "PCR",
+                "DNA Transfer"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "recombinationLambdaRed",
+            "author": "Dereck de Mézquita",
+            "displayName": "&lambda;red Recombination",
+            "image": "/siteImages/allPngs/5.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Thieves in the chromosome.",
+            "summary": "&lambda; red recombination allows for the insertion of a PCR fragment into a DNA sequence. In order for this process to be done, one needs to linearise the DNA sequence (if plasmid), and then prepare the &lambda;<sub>red</sub> strain which in this case contain the red system in their chromosome and are temperature inducible.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "Recombination",
+                "DNA",
+                "Primers",
+                "PCR",
+                "DNA Transfer"
+            ],
+            "likes": 0
+        },
+        {
+            "name": "transformation",
+            "author": "Dereck de Mézquita",
+            "displayName": "Bacterial transformation",
+            "image": "/siteImages/allPngs/440.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "You only get one first introduction.",
+            "summary": "Here we look at how to transform bacteria with new plasmids. Transformation is the act of introducing a DNA sequence into the cells. We use chemocompetent cells in this case, a strain commonly used is DH5&alpha;.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Microbiology",
+                "Bacteria",
+                "PCR",
+                "DNA",
+                "Primers",
+                "Transformation",
+                "DNA Transfer"
+            ],
+            "likes": 0
+        }
+    ]
+}
