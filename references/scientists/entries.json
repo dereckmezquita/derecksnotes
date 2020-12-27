@@ -1,0 +1,124 @@
+{
+    "entries": [
+        {
+            "name": "antoineDeLavoisier",
+            "author": "Dereck de Mézquita",
+            "displayName": "Antoine de Lavoisier",
+            "image": "/siteImages/allPngs/114.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "A revolution like Darwin's evolution.",
+            "summary": "Antoine-Laurent de Lavoisier was born in Paris 26 August 1743. His family was part of French nobility and was relatively well off. He would lose his parents and become orphan at the age of five.",
+            "primaryTag": "Scientists",
+            "tags": [
+                "Chemistry",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "antoineVanLeeuwenhoeke",
+            "author": "Dereck de Mézquita",
+            "displayName": "Antoine van Leeuwenhoeke",
+            "image": "/siteImages/allPngs/84.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Really tiny thingies.",
+            "summary": "Antonie Philips van Leeuwenhoek was born 24 October 1632 in Delft, Dutch Republic. Leeuwenhoek was educated at Warmond school for a period of time and then sent to his uncle in Benthuizen.",
+            "primaryTag": "Scientists",
+            "tags": [
+                "Biology",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "aristotle",
+            "author": "Dereck de Mézquita",
+            "displayName": "Aristotle",
+            "image": "/siteImages/allPngs/102.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Smartest man to ever yeet?",
+            "summary": "Aristotle was a student to Plato who was in turn pupil to the great Socrates. These three men established the bedrock and foundation for our western societies! Aristotle had wide and varied interests, he wrote about many subjects; maths, biology, physics, metaphysics, ethics, and theatre just to name a few.",
+            "primaryTag": "Scientists",
+            "tags": [
+                "Philosophy",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "carlVonLinnaeus",
+            "author": "Dereck de Mézquita",
+            "displayName": "Carl von Linnaeus",
+            "image": "/siteImages/allPngs/523.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "Classification, passification, Latinisation!",
+            "summary": "Carl von Linnaeus was born 23 May 1707 in Råshult, southern Sweden. His father was a church minister and amateur botanist who shared his passion with his son from an early age. Latin was one of the first languages that Linnaeus learned.",
+            "primaryTag": "Scientists",
+            "tags": [
+                "Biology",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "gregorMendel",
+            "author": "Dereck de Mézquita",
+            "displayName": "Gregor Mendel",
+            "image": "/siteImages/allPngs/513.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "50 tips for longer pods, and yellower peas?",
+            "summary": "Gregor Johann Mendel is known today as the father of modern genetics. His works would first perplex the scientific world and would then remain largely ignored for some time. ",
+            "primaryTag": "Scientists",
+            "tags": [
+                "Biology",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
+            "name": "robertHooke",
+            "author": "Dereck de Mézquita",
+            "displayName": "Robert Hooke",
+            "image": "/siteImages/allPngs/153.png",
+            "date": {
+                "year": "2019",
+                "month": "03",
+                "day": "25"
+            },
+            "slogan": "The great rival...",
+            "summary": "Robert Hooke was a scientist, polymath, renaissance man, and influential figure of the Royal Society in London. His works range from astronomy, and physics to biology. He was born in Freshwater, England on the Isle of Wight in 1635.",
+            "primaryTag": "Scientists",
+            "tags": [
+                "Biology",
+                "Science"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        }
+    ]
+}
