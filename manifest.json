@@ -1,0 +1,57 @@
+{
+    "name": "Dereck's Notes",
+    "short_name": "DerecksNotes",
+    "start_url": "/index.php",
+    "scope": ".",
+    "display": "standalone",
+    "theme_color": "#ba1820",
+    "background_color": "#ba1820",
+    "description": "The online brain of Dereck de Mezquita",
+    "dir": "ltr",
+    "lang": "en-UK",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "/siteImages/appLogos/64derecksNotesLogoRound.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "/siteImages/appLogos/144derecksNotesLogoRound.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/siteImages/appLogos/152derecksNotesLogoRound.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "/siteImages/appLogos/167derecksNotesLogoRound.png",
+            "type": "image/png",
+            "sizes": "167x167"
+        },
+        {
+            "src": "/siteImages/appLogos/180derecksNotesLogoRound.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "/siteImages/appLogos/192derecksNotesLogoRound.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/siteImages/appLogos/512derecksNotesLogoRound.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "related_applications": [
+        {
+            "platform": "",
+            "url": "",
+            "id": ""
+        }
+    ]
+}

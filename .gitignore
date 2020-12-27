@@ -1,4 +1,5 @@
 **/*.zip
+sftp.json
 
 .DS_Store
 .versions

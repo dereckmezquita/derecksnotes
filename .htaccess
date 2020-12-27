@@ -1,0 +1,8 @@
+ErrorDocument 403 /403.shtml
+ErrorDocument 404 /404.shtml
+ErrorDocument 500 /500.shtml
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?derecksnotes\.com
+RewriteRule ^(.*)$ https://www.derecksnotes.com/$1 [R,L]

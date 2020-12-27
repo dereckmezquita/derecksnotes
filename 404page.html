@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dereck's Notes | 404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+            background: #333;
+        }
+
+        #canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+    
+            resize();
+    
+            window.onresize = resize;
+    
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+    
+            function update() {
+                ctx.font = `${randomInt(25,100)}px Roboto`;
+                ctx.fillStyle = `rgb(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)})`;
+    
+                    ctx.fillText('404', randomInt(-50,canvas.width), randomInt(-50,canvas.height+50));
+    
+                requestAnimationFrame(update);
+            }
+    
+            function randomInt(min, max) {
+                return Math.floor(Math.random()*(max-min+1)+min);
+            };
+    
+            update();
+        </script>
+</body>
+</html>
