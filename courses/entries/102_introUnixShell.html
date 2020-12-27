@@ -1,0 +1,983 @@
+<title>Introduction to UNIX shell</title>
+<h1>Introduction to UNIX shell</h1>
+<!-- UE102 Introduction to mathematics and computer science for biology -->
+<div class="courseInfo">
+    <div class="articleData">16 September 2019</div>
+    <div class="articleData">Université Paris-Saclay</div>
+    <!-- <div class="articleData">Maeva Veyssiere</div> -->
+</div>
+<p>
+    A UNIX shell ix a command line interface/interpreter or shell that allows one to use a command line to manipulate UNIX-like operating systems. It is a both an interactive command language and a scripting language. You can both use it as a console, and write and save scripts to be run later.
+</p>
+<p>
+    It is used by the operating system to control the execution of shell scripts. Operating systems like, OSX and Linux are based on UNIX. The operating system manages memory and computing power (CPU, GPU), devices (screen, keyboard), and manages users. Operating systems allows us to run computer programmes and the graphical user interface (GUI).
+</p>
+<div class="note">
+    We will learn: directory structure, shell (command lin interface), philosphy (multiuser/multitasking), flexibility; everything is a file.
+</div>
+<p>
+    All UNIX shells allow for filename wildcarding, piping, here documents, command substitution, variables, and control structures for condition testing/iteration.
+</p>
+<h2>History</h2>
+<p>
+    The origins of UNIX start with multics created at MIT in the 60s, this was then licenced by AT&T in the 70s. The GNU project in the 80s developped the project. Finally Linux was created by Linus Torvalds in the 90s.
+</p>
+<p>
+    The Linux operating system has by far gone on to become the most succesful and widely used operating system in the world. Today it runs on anything from personal machines, industrial machines, and a majority of internet servers.
+</p>
+<h2>Some basic commands</h2>
+<div class="note">
+    To clear the command line or shell use the <code>clear</code> command.
+</div>
+<h2>Architecture of UNIX</h2>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/osStructure.jpg">
+    <figcaption>A representation of an OS's structure.</figcaption>
+</figure>
+<p>
+    Simply put computer programmes, including GUI ones, access the computer's hardware through the kernal and system calls.
+</p>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/fileStructure.jpg">
+    <figcaption>A representation of an OS's file tree.</figcaption>
+</figure>
+<p>
+    The computer's storage is the separated into various parts and compartments, some accessible to a basic user and some not. The /bin, /dev, /etc, are mostly files used by the system and the programmes installed on the machine. /usr contains common user system files for programmes installed on the machine; this reduces redundencies and saves storage. Finally the /home directory contains the different user's files; on macOS machines. 
+</p>
+<p>
+    There is only one root in UNIX. Called by the "/". Every path starts from the root.
+</p>
+
+<h2>The shell</h2>
+<p>
+    In essence the shell is a programme like any other, but this particular programme allows us access to the machine's hardware through commands and scripts.
+</p>
+<div class="note">
+    You can launch the terminal in mac by searching your machine for an application named "Terminal". It is often found in the applications directory in the folder Utilities.
+</div>
+<p>
+    It is an interface where we can give commands, a command line type of interface. The command line interface interprets what the user types. A command can be: a built-in shell command (ls, pwd, mkdir, etc...), an executable script, or even a compiled programme.
+</p>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/typicalMacTerminal.png">
+    <figcaption>The typical Mac terminal.</figcaption>
+</figure>
+<p>
+    There are different implementations of the shell; sh, bash, csh, tsh, zsh...
+</p>
+<div class="note">
+    The Mac terminal uses the BASH implimentation, as seen in the terminal's name up top in the info bar.
+</div>
+
+<h2>Structure of a command</h2>
+<p>
+    A command for example: <code>ls*</code> <code>-option**</code> <code>argument***</code>
+</p>
+
+<ul>
+    <li>
+        Command*: ls, pwd, mkdir.
+    </li>
+    <li>
+        Option**: -a, -l...
+    </li>
+    <li>
+        Argument***: name of a folder or file etc.
+    </li>
+</ul>
+<div class="warning">
+    Pro-tip: never use a space in files or folder names, if you must use quotations "" in the shell for the name to delimit the name.
+</div>
+
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/manls.png">
+    <figcaption>Example on what the <code>man</code> command does. To quit the <code>man</code> command press <code>q</code></figcaption>
+</figure>
+<div class="note">
+    If you have a command but you don't know what it does or how to use, the use <code>man</code> + command: <code>man ls</code>. This will list examples and informations as to how to use it. cat <code>--help</code> is a similar command but gives a bit more information, to use it do: <code>cat --help</code>, the command being cat, and the help being well help.
+</div>
+<p>
+    When entering commands into a shell, there is typically a blinking cursor there. You can enter commands etc, and if you want to avoid wasting time repeating commands you've already done then you can push the up and down arrows to navigate previous commands.
+</p>
+
+<h2>Login and logout</h2>
+<p>
+    To login: type <code>login</code>, will prompt for a user name and password.
+</p>
+<pre class="brush: bash">
+    Last login: Sun Sep 22 10:21:34 on ttys000
+    MacBook-Pro-de-Dereck:~ Dereck$ login
+    login: Dereck
+    Password:
+    Last login: Tue Sep 24 12:16:17 on ttys000
+    MacBook-Pro-de-Dereck:~ Dereck$ 
+</pre>
+<div class="note">
+    Note that when you type the username the characters are visible, yet when you enter the password they are not, do not worry it is taking your input simply type the password and press enter.
+</div>
+<p>
+    To use a server, <code>ssh user@server</code>, connects to a distant server (may prompt for a password).
+</p>
+<p>
+    Logout: <code>logout</code> simply logs out of the system.
+</p>
+
+<h2>System information</h2>
+<ul>
+    <li>
+        <code>w</code>: show list of connected users.
+    </li>
+    <li>
+        <code>whoami</code>: shows the name of the current user.
+    </li>
+    <li>
+        <code>uname -a</code>: shows kernal information (Linux, Darwin for OSX).
+    </li>
+    <li>
+        <code>date</code>: shows current date and time.
+    </li>
+    <li>
+        <code>cat/proc/cpuinfo</code>: shows cpu information.
+    </li>
+</ul>
+
+<h2>Process control</h2>
+<ul>
+    <li>
+        <code>ctrl + c</code>: abort execution.
+    </li>
+    <li>
+        <code>ctrl + z</code>: pause execution.
+    </li>
+</ul>
+<p>
+    To go back to the programme, <code>fg</code>, to let the programme resume in the background type <code>bg</code>. This allows to push the exectution to the background and let you use the shell for other things meanwhile. So to restate: pause then send to background, or type the command and leave a space and type <code>-&</code> this will directly send the execution to the background.
+</p>
+<ul>
+    <li>
+        <code>ps -u</code>: this will show all programmes that are currently running on the machine.
+    </li>
+</ul>
+
+<pre class="brush: bash">
+    MacBook-Pro-de-Dereck:~ Dereck$ ps -u 'Dereck'
+    UID   PID TTY           TIME CMD
+    501   328 ??         0:03.11 /System/Library/Frameworks/LocalAuthentication.f
+    501   329 ??         1:27.82 /usr/sbin/cfprefsd agent
+    501   331 ??         2:46.40 /usr/libexec/UserEventAgent (Aqua)
+    501   333 ??         0:53.42 /usr/sbin/distnoted agent
+    501   335 ??         0:34.34 /System/Library/Frameworks/CoreTelephony.framewo
+    501   336 ??         0:25.58 /usr/libexec/rapportd
+    501   337 ??         0:15.67 /usr/libexec/lsd
+    501   338 ??         5:33.34 /usr/libexec/trustd --agent
+    501   339 ??         0:11.42 /System/Library/PrivateFrameworks/HomeKitDaemon.
+    501   340 ??         5:56.90 /System/Library/PrivateFrameworks/IDS.framework/
+</pre>
+<p>
+    If you want to distinguish the programmes running on your user then do <code>ps -u `whoami`</code>. This will show the ID "PID" of the programme and the time also with the command. As seen above a quick example of what was currently running on my machine.
+</p>
+<ul>
+    <li>
+        <code>kill -9 PID*</code> this will stop the execution of the programme with the ID.
+    </li>
+</ul>
+
+<h2>Navigating the file directory</h2>
+<ul>
+    <li>
+        <code>pwd</code>: shows the current directory.
+    </li>
+    <li>
+        <code>ls</code>: lists all files and folders in current directory.
+    </li>
+    <li>
+        <code>cd directoryName</code>: changes current directory.
+    </li>
+</ul>
+<div class="note">
+    Pro-tip: when typing a file or directory name press tab it will autocomplete the name for you based on the first given characters.
+</div>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/ls-al.png">
+    <figcaption><code>ls -al</code> command.</figcaption>
+</figure>
+<ul>
+    <li>
+        <code>ls -al</code>: ls list all the files in current directory, -a includes hidden files, and -l prints the details (size, etc).
+    </li>
+</ul>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/mkdir.png">
+    <figcaption><code>mkdir</code> will create a directory with the name of the given argument.</figcaption>
+</figure>
+<ul>
+    <li>
+        <code>mkdir testdirectory</code>, will create the directory with the given name.
+    </li>
+</ul>
+
+<h2>Manipulating files and folders</h2>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/touch.png">
+    <figcaption><code>touch</code> command. Note used the cd command to move into the file beforehand.</figcaption>
+</figure>
+<ul>
+    <li>
+        <code>touch</code>: this command creates a new empty file.
+    </li>
+</ul>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/rm.png">
+    <figcaption><code>rm</code> command removes the folder.</figcaption>
+</figure>
+
+<ul>
+    <li>
+        <code>rm</code> removes the file and deletes it permentantly there is no bin please be careful with this command.
+    </li>
+</ul>
+
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/mvrename.png">
+    <figcaption><code>mv</code> command, moves or renames a file.</figcaption>
+</figure>
+<ul>
+    <li>
+        <code>mv</code> will move a file or rename, here it renamed the file to the new name.
+    </li>
+</ul>
+<div class="warning">
+    Note that an interesting question came up in class, how does the computer know that the mv command is meant to rename rather than move, what if I don't use the extension. Let's test this.
+</div>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/mvmove.png">
+    <figcaption><code>mv</code> moves a file, ignore the mistakes as I forgot I had renamed the file name.</figcaption>
+</figure>
+<ul>
+    <li>
+        <code>mv</code> for moving a file moves the file instead of renaming it if the directory with the given name exists. If it does not exist then it would rename it as shown below.
+    </li>
+</ul>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/mvrename2.gif">
+    <figcaption><code>mv</code> renames when the directory doesn't exist.</figcaption>
+</figure>
+<p>
+    As shown in the gif above <code>mv</code> will default to renaming the file when the directory indicated doesn't exist.
+</p>
+
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/rm-rf.gif">
+    <figcaption><code>rm</code> removes a directory warning use with caution no bin.</figcaption>
+</figure>
+<ul>
+    <li>
+        <code>rm -rf</code> will remove the indicated directory but be careful it will also remove any subfiles, using it without the -rf option will give a warning.
+    </li>
+</ul>
+<div class="warning">
+    Use with caution there is no trash bin.
+</div>
+
+<h2>File permissions</h2>
+<p>
+    On a LINUX system permissions are granted to specific users. Here is a quick summary of the different possibilities. This is seen when we do <code>ls -l</code> this will give the permissions and details. They are separated into three groups.
+</p>
+<ul>
+    <li>
+        <code>r</code> is read.
+    </li>
+    <li>
+        <code>w</code> is write.
+    </li>
+    <li>
+        <code>x</code> is execute.
+    </li>
+</ul>
+
+<p>
+    Here are some examples below of permissions.
+</p>
+<ul>
+    <li>
+        <code>rwxrwxrwx</code>: read, write and execute permissions for everyone.
+    </li>
+    <li>
+        <code>rwx------</code>: read, write and execute for current user only.
+    </li>
+    <li>
+        <code>rw-r-----</code>: read and write for current user, read only for other users of the same group.
+    </li>
+</ul>
+
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/ls-l.png">
+    <figcaption>Shown are the permissions to this file.</figcaption>
+</figure>
+
+<p>
+    The permissions are split into three groups as stated above: user, group of user, and finally other users.
+</p>
+
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/chmod+x.png">
+    <figcaption><code>chmod</code> will allow the change of permissions.</figcaption>
+</figure>
+<ul>
+    <li>
+        <code>chmod +x</code>: adds the execution rights to all users.
+    </li>
+</ul>
+
+<h3>File permissions options</h3>
+<p>
+    These options can be used with the <code>chmod</code> command shown above. Here is a run down which are available and of what they do.
+</p>
+<ul>
+    <li>
+        +x adds execution.
+    </li>
+    <li>
+        -x removes execution rights.
+    </li>
+    <li>
+        +r adds reading rights.
+    </li>
+    <li>
+        +w adds writing rights.
+    </li>
+    <li>
+        +rwx adds all of the above.
+    </li>
+    <li>
+        u+x change rights for current user; execution.
+    </li>
+    <li>
+        g+x change rights for current group; execution.
+    </li>
+    <li>
+        o+x change rights for other users; execution.
+    </li>
+    <li>
+        a+x change the rights for everyone; execution.
+    </li>
+</ul>
+<div class="note">
+    <code>chmod a-rwx filename.txt</code>: removes all permissions to all users.
+</div>
+
+<h3>Other commands</h3>
+<ul>
+    <li>
+        <code>chown username filename</code>: sets the ownership of file to a user.
+    </li>
+    <li>
+        <code>chgrp groupname filename</code>: sets the ownership of file to a group.
+    </li>
+</ul>
+
+<h2>Manipulating permissions</h2>
+<div class="courseInfo">
+    <div class="articleData">17 September 2019</div>
+    <div class="articleData">Université Paris-Saclay</div>
+    <!-- <div class="articleData">Maeva Veyssiere</div> -->
+</div>
+<h3 class="exercise">Exercise</h3>
+<ol>
+    <li>
+        Create a directory.
+    </li>
+    <li>
+        Inside the directory create an empty file.
+    </li>
+    <li>
+        Modify the rights for the new file, make it readable and executable for all the user but writable only for the owner of the file.
+    </li>
+</ol>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/exerciseOne.png">
+    <figcaption>Changing the permissions of a file.</figcaption>
+</figure>
+
+<pre class="brush: bash">
+    Last login: Mon Sep 16 16:16:42 on ttys000
+    MacBook-Pro-de-Dereck:~ Dereck$ pwd
+    /Users/Dereck
+    MacBook-Pro-de-Dereck:~ Dereck$ cd Desktop
+    MacBook-Pro-de-Dereck:Desktop Dereck$ pwd
+    /Users/Dereck/Desktop
+    MacBook-Pro-de-Dereck:Desktop Dereck$ mkdir newdirectory
+    MacBook-Pro-de-Dereck:Desktop Dereck$ cd newdirectory
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ pwd
+    /Users/Dereck/Desktop/newdirectory
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ touch newfile.txt
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ ls -l
+    total 0
+    -rw-r--r--  1 Dereck  staff  0 Sep 17 10:43 newfile.txt
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ chmod a-rwx
+    usage:	chmod [-fhv] [-R [-H | -L | -P]] [-a | +a | =a  [i][# [ n]]] mode|entry file ...
+        chmod [-fhv] [-R [-H | -L | -P]] [-E | -C | -N | -i | -I] file ...
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ chmod a-rwx newfile.txt
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ ls -l
+    total 0
+    ----------  1 Dereck  staff  0 Sep 17 10:43 newfile.txt
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ chmod a+rx newfile.txt
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ ls -l
+    total 0
+    -r-xr-xr-x  1 Dereck  staff  0 Sep 17 10:43 newfile.txt
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ chmod u+w newfile.txt
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ ls -l
+    total 0
+    -rwxr-xr-x  1 Dereck  staff  0 Sep 17 10:43 newfile.txt
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ 
+</pre>
+<p>
+    The commands to add a remove permissions are: <code>chmod "user"+/-rwx</code>
+</p>
+
+<h2>Compressing and archiving files</h2>
+<h3>gzip</h3>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/gzip.gif">
+    <figcaption>Zipping or compressing a file with <code>gzip</code></figcaption>
+</figure>
+<ul>
+    <li>
+        <code>gzip fileName</code>: this will compress the file the original will no longer be available, there is an option to keep both.
+    </li>
+    <li>
+        <code>gunzip file</code>: will unzip the file back to the original.
+    </li>
+</ul>
+<pre class="brush: bash">
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ gzip newfile.txt.gz
+    gzip: newfile.txt.gz already has .gz suffix -- unchanged
+    MacBook-Pro-de-Dereck:newdirectory Dereck$ 
+</pre>
+<p>
+    For the curious this is what happens when you try to <code>gzip</code> an already compressed file:
+</p>
+
+<h3>tar</h3>
+<p>
+    The interest of <code>tar</code> vs <code>gzip</code> is that it works from a directory, unlike <code>gzip</code> which works from files. This allows us to zip multiple files at once easily.
+</p>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/tar-cf.gif">
+    <figcaption>Zipping a file with <code>tar</code> can also be used to zip multiple files.</figcaption>
+</figure>
+<p>
+    Note that the original file is not deleted with <code>tar</code>.
+</p>
+<p>
+    You can also use <code>tar</code> for compression, but the syntax is backwards. Here with <code>tar</code> we give the options then the file we want to create or the <em>archive.tar</em> as the first argument, and the names of the files to compose the archive as the second.
+</p>
+
+<h2>Wildcards and regular expressions</h2>
+<p>
+    This allows us to target patterns in names of files, thus to work on multiple files all at once. Here are some wildcards to get started:
+</p>
+<ul>
+    <li>
+        <code>*</code> all files in current folder.
+    </li>
+    <li>
+        <code>x*</code> all files that start with "x".
+    </li>
+    <li>
+        <code>*.gz</code> all files that ends in "gz".
+    </li>
+    <li>
+        <code>*a*</code> all files that contains an "a".
+    </li>
+    <li>
+        <code>dir/*</code> all files in folder "dir".
+    </li>
+    <li>
+        <code>*/*</code> all files in all folders (first level).
+    </li>
+</ul>
+
+<h2>Working on a gene sequence</h2>
+<p>
+    Let's start by downloading a gene file from rscb.org. Chose a gene any really and download the fasta file.
+</p>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/downloadFasta.png">
+    <figcaption>Just download any file.</figcaption>
+</figure>
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/fastaSeq.png">
+    <figcaption>FASTA sequence format.</figcaption>
+</figure>
+
+<h3>Working with txt/fasta in the shell</h3>
+<p>
+    Now we will try working with our file inside the shell, counting the number of lines seeing the text etc. Here are some commands to get started:
+</p>
+<ul>
+    <li>
+        <code>cat file1 file2</code>: prints the contents of the file(s).
+    </li>
+    <li>
+        <code>head -5 file</code>: prints the first n (eg 5) lines of a file.
+    </li>
+    <li>
+        <code>tail -5 file</code>: print the last n (eg 5) lines of a file.
+    </li>
+    <li>
+        <code>tail -n +5 file</code>: skip the 5 first lines of a file and prints the rest.
+    </li>
+    <li>
+        <code>wc -l file</code>: print the number of lines in a file.
+    </li>
+    <li>
+        <code>wc -c file</code>: print the number of characters in a file.
+    </li>
+    <li>
+        <code>zcat or gzcat file.gz</code>: prints the content of zipped files.
+    </li>
+    <li>
+        <code>less file</code>: browse a file page by page.
+    </li>
+</ul>
+
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/cat.png">
+    <figcaption>Printing the text in a file.</figcaption>
+</figure>
+
+<h2>Processing files through a UNIX pipeline</h2>
+<p>
+    Processing text files through a UNIX pipeline. This means we can chain commands together with a pipe character "|". Here is an example:
+</p>
+<pre class="brush: bash">
+    cat 6e5b.fasta.txt|tail -n +1|cut -c4-|sort -k1| uniq| awk '{print $1 "\t" $4}'|gzip > newfile.txt.gz
+</pre>
+
+<div class="courseInfo">
+    <div class="articleData">19 September 2019</div>
+    <div class="articleData">Université Paris-Saclay</div>
+    <!-- <div class="articleData">Maeva Veyssiere</div> -->
+</div>
+
+<pre class="brush: bash">
+        [MacBook-Pro-de-Dereck:bash Dereck$ pwd
+        /Users/Dereck/Coding/bash
+        MacBook-Pro-de-Dereck:bash Dereck$ ls
+        SC.gtf
+        MacBook-Pro-de-Dereck:bash Dereck$ cat SC.gtf | grep -e "SGD\ttranscript" | head -20
+        IV	SGD	transcript	1802	2953	.	+	.	gene_id "YDL248W"; transcript_id "YDL248W"; gene_name "COS7"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "COS7"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	3762	3836	.	+	.	gene_id "YDL247W-A"; transcript_id "YDL247W-A"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	5985	7814	.	+	.	gene_id "YDL247W"; transcript_id "YDL247W"; gene_name "MPH2"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "MPH2"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	8683	9756	.	-	.	gene_id "YDL246C"; transcript_id "YDL246C"; gene_name "SOR2"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "SOR2"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	11657	13360	.	-	.	gene_id "YDL245C"; transcript_id "YDL245C"; gene_name "HXT15"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "HXT15"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	16204	17226	.	+	.	gene_id "YDL244W"; transcript_id "YDL244W"; gene_name "THI13"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "THI13"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	17577	18566	.	-	.	gene_id "YDL243C"; transcript_id "YDL243C"; gene_name "AAD4"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "AAD4"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	18959	19312	.	+	.	gene_id "YDL242W"; transcript_id "YDL242W"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	20635	21006	.	+	.	gene_id "YDL241W"; transcript_id "YDL241W"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	22471	22608	.	-	.	gene_id "YDL240C-A"; transcript_id "YDL240C-A"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	22823	25876	.	+	.	gene_id "YDL240W"; transcript_id "YDL240W"; gene_name "LRG1"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "LRG1"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	26403	28775	.	-	.	gene_id "YDL239C"; transcript_id "YDL239C"; gene_name "ADY3"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "ADY3"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	28985	30454	.	-	.	gene_id "YDL238C"; transcript_id "YDL238C"; gene_name "GUD1"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "GUD1"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	30657	31829	.	+	.	gene_id "YDL237W"; transcript_id "YDL237W"; gene_name "AIM6"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "AIM6"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	32296	33234	.	+	.	gene_id "YDL236W"; transcript_id "YDL236W"; gene_name "PHO13"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "PHO13"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	33415	33918	.	-	.	gene_id "YDL235C"; transcript_id "YDL235C"; gene_name "YPD1"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "YPD1"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	34237	36477	.	-	.	gene_id "YDL234C"; transcript_id "YDL234C"; gene_name "GYP7"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "GYP7"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	36797	38173	.	+	.	gene_id "YDL233W"; transcript_id "YDL233W"; gene_name "MFG1"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	38487	38597	.	+	.	gene_id "YDL232W"; transcript_id "YDL232W"; gene_name "OST4"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "OST4"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        IV	SGD	transcript	38867	42244	.	-	.	gene_id "YDL231C"; transcript_id "YDL231C"; gene_name "BRE4"; gene_source "SGD"; gene_biotype "protein_coding"; transcript_name "BRE4"; transcript_source "SGD"; transcript_biotype "protein_coding";
+        MacBook-Pro-de-Dereck:bash Dereck$ 
+</pre>
+
+<p>
+    Here is part of our file printed out, we wanted just the transcripts. To print just these we used a regular expression with the command <code>grep</code>.
+</p>
+<p>
+    Here is a command plus some review on regex.
+</p>
+<pre class="brush: bash">
+    bash Dereck$ cat SC.gtf | grep -e "SGD\ttranscript" | head -20
+
+    # This is a comment
+    # This is the syntax for using this grep command
+
+    ... | grep options pattern | ...
+
+    # Important options
+    -P # Allows Perl style and special characters
+    -v # Negative grep, exludes lines with the pattern given
+
+    # Some patterns
+    "text" # Lines containing "text".
+    "^text" # Lines starting with "text".
+    "text$" # Lines finishing by "text".
+    "text.abc" # Lines containing "text" other characters, then "abc".
+    "[axz]" # Lines containing characters, a, x, or z.
+    "[a-z]" # Lines containing lower case characters.
+    "[^0-9]" # Lines not containing numerical characters.
+</pre>
+
+<div class="note">
+    Note that when <code>^</code> is used inside the <code>[]</code> brackets it means excludes whatever is inside.
+</div>
+<p>
+    Let's try another command and try to get back just select columns from our file.
+</p>
+<pre class="brush: bash">
+    MacBook-Pro-de-Dereck:bash Dereck$ cat SC.gtf | grep -e "transcript\t" | cut -f 1,4,5,6,10 | head
+    IV	1802	2953	.
+    IV	3762	3836	.
+    IV	5985	7814	.
+    IV	8683	9756	.
+    IV	11657	13360	.
+    IV	16204	17226	.
+    IV	17577	18566	.
+    IV	18959	19312	.
+    IV	20635	21006	.
+    IV	22471	22608	.        
+</pre>
+<p>
+    Now we'll start trying to change the format of our file manually just to practice our commands. We will invert the order of two of the columns and add an empty column as well.
+</p>
+
+<pre class="brush: bash">
+    MacBook-Pro-de-Dereck:bash Dereck$ cat SC.gtf | grep -e "transcript\t" | awk '{print $1"\t"$4"\t"$5"\t"$10"\t0\t"$7}' | head
+    IV	1802	2953	"YDL248W";	0	+
+    IV	3762	3836	"YDL247W-A";	0	+
+    IV	5985	7814	"YDL247W";	0	+
+    IV	8683	9756	"YDL246C";	0	-
+    IV	11657	13360	"YDL245C";	0	-
+    IV	16204	17226	"YDL244W";	0	+
+    IV	17577	18566	"YDL243C";	0	-
+    IV	18959	19312	"YDL242W";	0	+
+    IV	20635	21006	"YDL241W";	0	+
+    IV	22471	22608	"YDL240C-A";	0	-
+</pre>
+
+<p>
+    Now let's try and replace an element with another. We'll use the <code>sed</code> command.
+</p>
+
+<p>
+    We'll try to substitute both semi-colon and quotes with nothing.
+</p>
+
+<pre class="brush: bash">
+    MacBook-Pro-de-Dereck:bash Dereck$ cat SC.gtf | grep -e "transcript\t" | awk '{print $1"\t"$4"\t"$5"\t"$10"\t0\t"$7}' | head
+    IV	1802	2953	"YDL248W";	0	+
+    IV	3762	3836	"YDL247W-A";	0	+
+    IV	5985	7814	"YDL247W";	0	+
+    IV	8683	9756	"YDL246C";	0	-
+    IV	11657	13360	"YDL245C";	0	-
+    IV	16204	17226	"YDL244W";	0	+
+    IV	17577	18566	"YDL243C";	0	-
+    IV	18959	19312	"YDL242W";	0	+
+    IV	20635	21006	"YDL241W";	0	+
+    IV	22471	22608	"YDL240C-A";	0	-
+    MacBook-Pro-de-Dereck:bash Dereck$ cat SC.gtf | grep -e "transcript\t" | awk '{print $1"\t"$4"\t"$5"\t"$10"\t0\t"$7}' | sed 's/[;\*]//g'  | head
+    IV	1802	2953	"YDL248W"	0	+
+    IV	3762	3836	"YDL247W-A"	0	+
+    IV	5985	7814	"YDL247W"	0	+
+    IV	8683	9756	"YDL246C"	0	-
+    IV	11657	13360	"YDL245C"	0	-
+    IV	16204	17226	"YDL244W"	0	+
+    IV	17577	18566	"YDL243C"	0	-
+    IV	18959	19312	"YDL242W"	0	+
+    IV	20635	21006	"YDL241W"	0	+
+    IV	22471	22608	"YDL240C-A"	0	-
+</pre>
+
+<p>
+    So we're using the <code>sed</code> command coupled with the regular expression: <code>s/[;\*]//g</code> between simple quotes ''. The syntax is:
+</p>
+<pre class="brush: bash">
+    ... | sed 's/pattern/replacement/g' | ...
+</pre>
+<p>
+    The <code>g</code> is for global at the end, if not included then it would only work on the first instance.
+</p>
+<p>
+    To sort a file we'll use the command <code>sort</code>.
+</p>
+<pre class="brush: bash">
+    MacBook-Pro-de-Dereck:bash Dereck$ cat SC.gtf | grep -e "transcript\t" | awk '{print $1"\t"$4"\t"$5"\t"$10"\t0\t"$7}' | sed 's/[;\*]//g'  | head
+    IV	1802	2953	"YDL248W"	0	+
+    IV	3762	3836	"YDL247W-A"	0	+
+    IV	5985	7814	"YDL247W"	0	+
+    IV	8683	9756	"YDL246C"	0	-
+    IV	11657	13360	"YDL245C"	0	-
+    IV	16204	17226	"YDL244W"	0	+
+    IV	17577	18566	"YDL243C"	0	-
+    IV	18959	19312	"YDL242W"	0	+
+    IV	20635	21006	"YDL241W"	0	+
+    IV	22471	22608	"YDL240C-A"	0	-
+    MacBook-Pro-de-Dereck:bash Dereck$ cat SC.gtf | grep -e "transcript\t" | awk '{print $1"\t"$4"\t"$5"\t"$10"\t0\t"$7}' | sed 's/[;\*]//g' | sort -k 2  | head
+    XV	1000	1338	"YOL166C"	0	-
+    IV	1000104	1002023	"YDR266C"	0	-
+    XII	1000342	1001703	"YLR431C"	0	-
+    VII	1000927	1002240	"YGR254W"	0	+
+    XV	1001147	1003225	"YOR354C"	0	-
+    V	100133	100204	"tM(CAU)E"	0	+
+    I	100225	101145	"YAL025C"	0	-
+    IV	1002510	1003502	"YDR267C"	0	-
+    VI	100252	100605	"YFL019C"	0	-
+    VII	1002523	1003962	"YGR255C"	0	-        
+</pre>
+<p>
+    And now we've sorted the data by the numerical order of the second column. Command was <code>sort -k 2</code>.
+</p>
+<p>
+    To sort by multiple criteria, we just repeat the <code>-k</code> option for sort and give it another argument.
+</p>
+
+<div class="courseInfo">
+    <div class="articleData">20 September 2019</div>
+    <div class="articleData">Université Paris-Saclay</div>
+    <!-- <div class="articleData">Maeva Veyssiere</div> -->
+</div>
+
+<h2>Editing text files using vi</h2>
+
+<figure>
+    <img class="lazy" data-src="/courses/entries/images/introUnixShell/vi.png">
+    <figcaption>Vim after being launched from terminal.</figcaption>
+</figure>
+<p>
+    The programme you use to edit your text files is more of a personal preference, but here we will see Vi. Vi is a command line based editing tool. You can launch it with the command <code>vi</code> from the terminal it should already be installed on Mac.
+</p>
+<div class="note">
+    Note we are still editing and using BASH we are just doing it inside an editor. For now we will keep learning a bit more about BASH before moving on to vim.
+</div>
+
+<h3>Some basic commands</h3>
+<ul>
+    <li>
+        commeand mode -> edit mode: type 'i'
+    </li>
+    <li>
+        edit mode -> command mode: type esc
+    </li>
+    <li>
+        From command mode only:
+        <ul>
+            <li>
+                Exit: ':q' then enter
+            </li>
+            <li>
+                Exit without saving: ':q!' then enter
+            </li>
+            <li>
+                Save: ':w' then enter
+            </li>
+            <li>
+                Save as: ':w' filename.txt then enter
+            </li>
+        </ul>
+    </li>
+    <li>
+        Go back to the shell:
+    </li>
+</ul>
+<p>
+    The point is to use this tool to write scripts and save them for later use. For us anyway.
+</p>
+
+<h3>Writing scripts</h3>
+<p>
+    Let's look at some syntax on how to write scripts.
+</p>
+<ul>
+    <li>
+        Shebang: first line of a script that tells the current shell which interpret the script when executed.
+        <pre class="brush: bash">
+            #!/bin/bash
+        </pre>
+    </li>
+    <li>
+        Comments: # This is a comment.
+        <pre class="brush: bash">
+
+        </pre>
+    </li>
+    <li>
+        
+    </li>
+    <li>
+        
+    </li>
+    <li>
+        
+    </li>
+</ul>
+
+<h3>Declaring variables and operations</h3>
+<p>
+    This process is relatively straight forward.
+</p>
+<pre class="brush: bash">
+    x=1
+    echo $x
+    echo "X is equal to $x"
+    echo "X is equal to ${x}abcd"
+    text="ABC DEF"
+    echo $text
+
+    # Numerical operations (integers)
+    y=$((x+1)); w=$((y*y));
+
+    # Numerical operations (float)
+    z=`echo "$y/2" | bc -l`
+
+    # Storing the return value of a command to a variable
+    sys=`uname -s` # Here the command is run and the value is saved to sys
+    echo "You are running a $sys system"
+
+    echo "You are running a `uname -s`system"
+</pre>
+
+<p>
+    This is what the output should look like. Note that the default output of BASH is an integer, in order to get a float we have to use the option <code>bc -l</code>; note that is an L not 1.
+</p>
+
+<pre class="brush: bash">
+    Last login: Fri Sep 20 10:44:44 on ttys000
+    MacBook-Pro-de-Dereck:~ Dereck$     x=1
+    MacBook-Pro-de-Dereck:~ Dereck$     echo $x
+    1
+    MacBook-Pro-de-Dereck:~ Dereck$     echo "X is equal to $x"
+    X is equal to 1
+    MacBook-Pro-de-Dereck:~ Dereck$     echo "X is equal to ${x}abcd"
+    X is equal to 1abcd
+    MacBook-Pro-de-Dereck:~ Dereck$     text="ABC DEF"
+    MacBook-Pro-de-Dereck:~ Dereck$     echo $text
+    ABC DEF
+    MacBook-Pro-de-Dereck:~ Dereck$   
+    
+    MacBook-Pro-de-Dereck:~ Dereck$     z=`echo "$y/2" | bc -l`
+    MacBook-Pro-de-Dereck:~ Dereck$ echo $z
+    1.00000000000000000000
+    MacBook-Pro-de-Dereck:~ Dereck$     y=$((x+1)); w=$((y*y));
+    MacBook-Pro-de-Dereck:~ Dereck$ echo $y
+    2
+</pre>
+
+<h3>If statements</h3>
+<p>
+    This is rather simple, and allows for more complex control structures.
+</p>
+
+<pre class="brush: bash">
+    # Simple if
+    if [ condition ]
+    then
+        ...
+    fi
+
+    # More conditions
+    if [ condition ]
+    then
+        ...
+    elif [ condition 2 ]
+    then
+        ...
+    else
+        ...
+    fi
+
+    # Multiple choices with case
+    case "$i" in 
+        value1)
+        ...
+        ;;
+        value2)
+        ...
+        ;;
+        *)
+        ... #allothervalues
+        ;;
+    esac
+</pre>
+
+<h3>Loops</h3>
+<p>
+    Loops allow us to run through variables or other data structures automatically to predetermined conditions. Here is the basic structure.
+</p>
+
+<h4>While loop</h4>
+<p>
+    Here's the syntax and an example for a while loop.
+</p>
+<pre class="brush: bash">
+    # Syntax:
+    while condition 
+    do
+        ...
+    done
+
+    # Example:
+    i=1
+    while [ $i –lt 10 ]
+    do
+        echo $i
+        i=$((i+1))
+    done
+
+    i=1
+    while read -r line
+    do
+        if [ -z $line ] then
+            continue
+            #skips rest of loop
+        elif ["$line” = "EOF" ] 
+        then
+            break
+            #exits the loop
+        else
+            echo "Line $i: $line"
+            i=$((i+1))
+        fi
+    done < "$filename”
+</pre>
+
+<h4>For loop</h4>
+<p>
+    Here is the syntax and an example for a for loop.
+</p>
+<pre class="brush: bash">
+    # Syntax:
+    for ((initialization; continue_condition; post_operation))
+    do
+        ...
+    done
+
+    # Example:
+    for ((i=1; i<100; i++))
+    do
+        echo “$i^2 = $((i**2))”
+        if [ $((i**2)) -gt 1000] 0
+        then
+            break # exit the loop if i^2 ≥ 100 
+        fi
+    done
+</pre>
+
+
+<ol class="foot-notes">
+    <div class="foot-notes-head">
+        Footnotes:
+    </div>
+    <li>
+        For more information on bioinformatics look up the forum Biostar, there is a book available there to get started on bioinformatics. 
+    </li>
+    <li>
+        Note the clear command doesn't really clear it just pushes to a new area or "window".
+    </li>
+    <li>
+        BASH seems to be zero indexed, please check this.
+    </li>
+</ol>
+
+<script type="text/javascript">
+    SyntaxHighlighter.all()
+</script>
