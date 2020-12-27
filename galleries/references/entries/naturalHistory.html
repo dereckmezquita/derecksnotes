@@ -1,0 +1,55 @@
+<title>Tableaux d'histoire naturelle</title>
+<h1>Tableaux d'histoire naturelle</h1>
+<p>
+    Some posters I had since 2014, these posters date from the mid 1800s. They are on the anatomy of a variety of
+    animals. These posters have been digitised by the <a aria-describedby="foot-label" href="#univ-artois">University of
+        Artois</a> in France.
+</p>
+
+<br>
+<figure><img class="lazy" data-src="/galleries/references/entries/images/naturalHistory/histoireNaturelle-1.jpeg">
+    
+    <figcaption>My personal copy of the anatomy of a Reptile, digitised in with an iPhone 7 in September 2019.</figcaption>
+</figure>
+<figure><img class="lazy" data-src="/galleries/references/entries/images/naturalHistory/histoireNaturelle-2.jpeg">
+    <figcaption>The anatomy of a Reptile, digitised in high quality by the <a aria-describedby="foot-label" href="#univ-artois">University of Artois</a>.</figcaption>
+</figure>
+<figure><img class="lazy" data-src="/galleries/references/entries/images/naturalHistory/histoireNaturelle-3.jpeg">
+    <figcaption>The anatomy of a Scorpion, digitised in high quality by the <a aria-describedby="foot-label" href="#univ-artois">University of Artois</a>.</figcaption>
+</figure>
+<figure><img class="lazy" data-src="/galleries/references/entries/images/naturalHistory/histoireNaturelle-4.jpeg">
+    <figcaption>The anatomy of an Annelid, digitised in high quality by the <a aria-describedby="foot-label" href="#univ-artois">University of Artois</a>.</figcaption>
+</figure>
+<figure><img class="lazy" data-src="/galleries/references/entries/images/naturalHistory/histoireNaturelle-5.jpeg">
+    <figcaption>The anatomy of an Shark, digitised in high quality by the <a aria-describedby="foot-label" href="#univ-artois">University of Artois</a>. I did not posses a copy of this poster, but it is beautiful and would one day like to have it.</figcaption>
+</figure>
+
+<script>
+    for (let i = 1; i < 6; i++) {
+        let src = "/galleries/references/entries/images/naturalHistory/histoireNaturelle-" + i + ".jpeg";
+
+        let anchor = document.querySelector(".anchor");
+        let figure = document.createElement("figure");
+        anchor.appendChild(figure);
+
+        let img = document.createElement("img");
+        img.setAttribute("src", src);
+        figure.appendChild(img);
+
+        let figcaption = document.createElement("figcaption");
+        figure.appendChild(figcaption);
+    };
+</script>
+
+<ol class="foot-notes">
+    <div class="foot-notes-head">
+        Footnotes:
+    </div>
+    <li>
+        Unfortuantely I had to part ways with them the 30th of September 2019, now in the possession of Julien Perochon.
+    </li>
+    <li id="univ-artois">
+        These posters have been digitised by the University of Artois in France: <a target="_blank"
+            href="http://bibnum-bu.univ-artois.fr">Univ Artois: Bibliothèque patrimonial</a>
+    </li>
+</ol>
