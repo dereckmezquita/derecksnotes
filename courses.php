@@ -12,7 +12,7 @@
                 <div class="writtenWrapper">
                     <h1>Courses</h1>
                         <p>
-                            Here you'll find a reportoire of different courses in various subjects, yet all focusing on science and technology. Most of these courses have been distilled from classes that I've taken myself in university. It is essential to thoroughly read and consume the contents of these courses but to also apply the acquired knowledge in the exercises section of this website. There should be links back and forth between these two sections.
+                            A reportoire of courses in various subjects; all focused on science and technology. Most of these courses have been distilled from classes that I've taken myself at university. It is essential to thoroughly read and consume the contents of these courses but to also apply the acquired knowledge in the exercises section of this website. There should be links back and forth between these two sections. Please note that some of these courses are a work in progress and shown as is; I will continue to update them until finished.
                         </p>
                 </div>
             </div>
