@@ -53,29 +53,6 @@
             "published": "Yes"
         },
         {
-            "name": "20200201_coronatime",
-            "author": "Dereck de Mézquita",
-            "displayName": "It's <span class=\"strikethrough\">coronatime</span> China flu time",
-            "image": "/siteImages/allPngs/95.png",
-            "date": {
-                "year": "2020",
-                "month": "03",
-                "day": "27"
-            },
-            "slogan": "Fever touch at 70%",
-            "summary": "Some of my thoughts and predictions on this current pandemic; COVID-19. This is much more serious than people are taking it for, I will continually update this page with updates. Look for strong text with a date, or strike-through for corrections.",
-            "primaryTag": "Biology",
-            "tags": [
-                "Pandemic",
-                "Biology",
-                "Health",
-                "World",
-                "Politics"
-            ],
-            "likes": 0,
-            "published": "Yes"
-        },
-        {
             "name": "20200323_sshkeys",
             "author": "Dereck de Mézquita",
             "displayName": "Server login: SSH keys",
