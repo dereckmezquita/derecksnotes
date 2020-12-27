@@ -1,6 +1,6 @@
 # derecksnotes <img src="./siteImages/icons/512derecksNotesLogo.png" width="75" align="right">
 
-This repository is for tracking my personal website: `www.derecksnotes.com`. 
+This repository is for tracking my personal website: [`www.derecksnotes.com`](www.derecksnotes.com). 
 
 <p align="center">
     <img src="./siteImages/misc/site-capture-0.png" width="750">
