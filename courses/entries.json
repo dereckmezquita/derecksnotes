@@ -1,6 +1,29 @@
 {
     "entries": [
         {
+            "name": "intro-ML-R",
+            "author": "Dereck de Mézquita",
+            "displayName": "Introduction to machine learning with R",
+            "image": "/siteImages/allPngs/229.png",
+            "date": {
+                "year": "2020",
+                "month": "12",
+                "day": "24"
+            },
+            "slogan": "Supporting vectors everywhere.",
+            "summary": "What is machine learning? Simply put, it’s a set of statistical methods and data analysis that automates analytical model building.",
+            "primaryTag": "Computer Science",
+            "tags": [
+                "Programming",
+                "Maths",
+                "Computer Science",
+                "Machine learning",
+                "R"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
             "name": "102_introR",
             "author": "Dereck de Mézquita",
             "displayName": "Introduction to R",

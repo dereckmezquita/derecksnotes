@@ -1,0 +1,413 @@
+<html>
+
+<head>
+	<title>Introduction to machine learning with R</title>
+</head>
+<body>
+<h1>Introduction to machine learning with R</h1>
+<div class="courseInfo">
+    <div class="articleData">12 April 2020</div>
+    <div class="articleData">Université de Paris-Saclay</div>
+</div>
+<p>
+    This is an .RHTML document associated to the `Intro to machine learning with R` course on derecksnotes.com. This is used to produce plots and other results for the course. It will be integrated into the HTML for that course.
+</p>
+
+<h2>R document set up</h2>
+<p>
+	This code is used for kniting the document and refreshing it in the viewer window of R-studio.
+</p>
+<!--begin.rcode knitr, eval = FALSE
+devtools::install_github("dereckdemezquita/octavius", force = TRUE)
+library("octavius")
+library("servr")
+end.rcode-->
+
+<!--begin.rcode
+getFileWd <- function() {
+	wd <- dirname(rstudioapi::getActiveDocumentContext()$path)
+	if(nchar(wd) == 0) {
+		message("This function can only be executed in the editor, please run from file context.")
+	} else if(nchar(wd) > 0) {
+		message(glue::glue("Got wd as: \"{dirname(rstudioapi::getActiveDocumentContext()$path)}\""))
+	}
+	return(wd)
+}
+isDefined <- function(var) {
+	var <- deparse(substitute(var));
+	env <- parent.frame();
+	exists(var, env);
+}
+wd <- getFileWd()
+
+servrKnitRhtml <- function(save = TRUE, input = "index.Rhtml", clear_cache = TRUE, wd = "", port = "6969") {
+	if(input != "index.Rhtml") {
+		output <- strsplit(input, split = ".", fixed = TRUE)[[1]][1];
+		output <- glue::glue("{output}.html");
+	} else {
+		output <- "index.html";
+	};
+	
+	if(save == TRUE) {
+		rstudioapi::documentSave();
+	};
+	
+	if(!isDefined(wd)) {
+		wd <- getFileWd()
+	};
+	
+
+	
+	daemon_stop <- function (which = daemon_list()) {
+		for (d in which) {
+			if (length(s <- servrEnv$daemon_list[[d]]) == 0)
+				next
+			stopServer(s)
+			servrEnv$daemon_list[[d]] = list()
+		}
+	}
+	
+	view(daemon_list())
+	daemon_list()[[]] == 1
+	isDefined(daemon_list())
+	
+	if (daemon_list() != 0) {
+		message("Nibba")
+	}
+	
+	servr::daemon_stop(which = daemon_list()); # Kills all currently open servers
+	localhost <- glue::glue("http://localhost:{port}")
+	servr::httw(dir = wd, # Launches server on: http://localhost:6969 default
+				watch = wd,
+				pattern = output,
+				all_files = TRUE,
+				port = port);
+	
+	rstudioapi::viewer(glue::glue("{localhost}/{output}"));
+
+	# message(glue::glue("File exported to: {output},\n Server launched on: {localhost}\n Current wd set to: {wd}."))
+	
+	knitr::clean_cache(clean = clear_cache); # Will clear cache by default
+	knitr::knit(
+		input = input,
+		output = output,
+		tangle = FALSE,
+		text = NULL,
+		quiet = TRUE,
+		envir = parent.frame(),
+		encoding = "UTF-8");
+}
+end.rcode-->
+
+
+<p>
+    Here set the variables as described; these will determine how and what the programme executes.
+</p>
+<!--begin.rcode output-params, include = FALSE, echo = FALSE
+par(mfrow = c(1, 1)); # Reseting margins on plots
+
+knitr::opts_chunk$set(echo = TRUE, results = "hide", message = FALSE, warning = FALSE);
+end.rcode-->
+
+<!--begin.rcode wd, include = FALSE, echo = FALSE
+os <- "macOS"; # Select OS: macOS, linux, windows
+wd <- "/Users/Work/Coding/projects-personal/web-sites/derecksnotes/courses/entries/documents/intro-ml-R" # dirname(rstudioapi::getActiveDocumentContext()$path); # If you want to set wd manually change this variable to a string of your path
+
+setwd(wd)
+end.rcode-->
+
+<p>
+	In this course we will cover machine learning, machine learning theory, and executing it with R. Suggested reading material is <a target="_blank" href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf">Gareth James: An Introduction to Statistical Learning</a>.
+</p>
+<h2>What is machine learning</h2>
+<p>
+    Simply put, it's a set of statistical methods and data analysis that automates analytical model building. It uses a set of algorithms to iteratively "learn", from data; or fit a model to a data set. Machine learning will allow you to use computers to discover insights without have to code a programme or model yourself.
+</p>
+<h2>Applications of machine learning</h2>
+<p>
+    Machine learning has applications in many places; including but not limited to:
+</p>
+<table>
+    <tr>
+        <td>Fraud detection</td>
+        <td>Search results</td>
+    </tr>
+    <tr>
+        <td>Targeted advertising</td>
+        <td>Pricing models</td>
+    </tr>
+    <tr>
+        <td>Pattern and image recognition</td>
+        <td>Financial modelling</td>
+    </tr>
+    <tr>
+        <td>Biological data modelling</td>
+        <td>GRN (gene regulatory network) inferencing</td>
+    </tr>
+</table>
+<h2>Types of learning</h2>
+<h3>Supervised learning</h3>
+<p>
+    Trained using labelled examples. Here we know the output of a given input. The algorithm receives inputs along with the correct outputs. The model is trained by comparing the output with the correct outputs.
+</p>
+<p>
+    Possible methods used in supervised learning are, classification, regression, prediction, and gradient boosting. Patterns are identified and used to predict labels on unlabelled data. 
+</p>
+<p>
+    This method is commonly used in places where historical data is a known predictor of future events. For example predicting price of an asset based on historical data.
+</p>
+<h3>Unsupervised learning</h3>
+<p>
+    There are no labels or historical labels. The algorithms have no input on the correct answer. The algorithms infer patterns from the data sets given; within the data sets themselves that is.
+</p>
+<p>
+    Here we do not need labelled data. This can also find attributes or characteristics that separate segments or groups within the data from one another; clustering.
+</p>
+<p>
+    Common methods here are self organising maps, nearest neighbour mapping, k-means clustering, and singular value decomposition.
+</p>
+<h3>Reinforcement learning</h3>
+<p>
+    Often used in robotics, gaming and navigation. Here the algorithm discovers through trial and error what is most effective. There are three major parts:
+</p>
+<ol>
+    <li>
+        The agent (learner or decision maker).
+    </li>
+    <li>
+        The environment (things with which the agent will interact).
+    </li>
+    <li>
+        Actions (things the agent can do in the given environment).
+    </li>
+</ol>
+<p>
+    The goal here is for the agent to find actions which can maximise a given reward. For example points in a video game. 
+</p>
+
+<h2>Linear regression</h2>
+<p>
+    We cover the history, basic concept, and building linear regression models in R.
+</p>
+<h3>History</h3>
+<p>
+    Francis Galton in the 1800s was studying the relation between the height of parents and their children. He found that the sons tended to be as tall as their father's; however the height of the sons also tended to be closer to the average of the surrounding population. 
+</p>
+<p>
+    This means that the height of a son will tend towards the height of his father, but also be pulled towards the average height. This Galton called regression; a father's son's height regressed or tended towards the mean.
+</p>
+
+<h2>Linear regression</h2>
+<h3>History</h3>
+<p>
+    In this example we try to draw a line as close to the every points that may appear on a plot. For classical linear regressior, aka "least squares method", you only need to measure the distance between the points on the Y axis.
+</p>
+<p>
+    This is simplest example possible. Take the following code chunk and plot example.
+</p>
+<h4>Example 1: linear regression</h4>
+<!--begin.rcode linearReg
+x <- 1:2;
+y <- 1:2;
+
+linearReg <- function(xs, ys) {
+  fit <- lm(ys ~ xs) # Fitting linear model
+  abline(fit, col = "red") # Adds straight line to plot; (y ~ x)
+};
+
+plot(x, y,
+	 main = "Linear regression between two points",
+	 xlim = c(0.75, 2.25),
+	 ylim = c(0.75, 2.25));
+linearReg(x, y);
+end.rcode-->
+
+<h4>Example 2: lowess regression</h4>
+<p>
+    In this example we do the regression test with the built in data set `iris`. This tracks flowers petal, sepal... etc. morphology per species.
+</p>
+<p>
+    This minimises the vertical distance between the points and the line. Here we take the lowess regression to get a best fit line to all points.
+</p>
+<!--begin.rcode lowess-regression
+lowessReg <- function(xs, ys) {
+	fit <- lowess(xs, ys);
+	lines(fit, col = "blue"); # lowess line (x,y)
+};
+
+plot(iris$Sepal.Length,
+	 iris$Petal.Length,
+	 main = "Sepal vs petal (length)");
+
+lowessReg(iris$Sepal.Length, iris$Petal.Length);
+end.rcode-->
+<p>
+    Formulas for building linear regression models in R are built in the following way; `(y ~ x)`. In order to add more predictor variables to be taken into account use the `+` sign in the formula `(y ~ x + z)`.
+</p>
+<p>
+    Let's redo the above plot with a linear regression model as we first did but this time attributing more predictor variables.
+</p>
+<!--begin.rcode multi-var-regression, results = "show"
+plot(iris$Sepal.Length,
+	 iris$Petal.Length + iris$Sepal.Width,
+	 main = "Sepal vs petal (length) + sepal width");
+
+abritrary_model <- lm(iris$Sepal.Length ~ iris$Petal.Length + iris$Sepal.Width, data = iris);
+
+x <- sort(iris$Sepal.Length);
+y <- abritrary_model$fitted.values[order(iris$Sepal.Length)];
+
+lines(x, y, col = "purple");
+end.rcode-->
+<p>
+    Let's break down the formula: <code>abritrary_model <- lm(iris$Sepal.Length ~ iris$Petal.Length + iris$Sepal.Width, data = iris);</code>
+</p>
+<ul>
+    <li>
+        <code>lm()</code>: a function for linear regression.
+    </li>
+    <li>
+        <code>log(Sepal.Length, base = 10) ~ Petal.Length + Sepal.Width</code>: formula for modelling taken as input.
+    </li>
+    <li>
+        <code>log(Sepal.Length, base = 10)</code>: the quantity we want to predict.
+    </li>
+    <li>
+        <code>Petal.Length + Sepal.Width</code>: variables available to make predictions.
+    </li>
+</ul>
+<p>
+    Once we have declared all those variables in the arbitrary model we can then use them for prediction:
+</p>
+<!--begin.rcode prediction-model, results = "show"
+iris$predLog <- predict(abritrary_model, newdata = iris$Species)
+
+iris$predLog
+end.rcode-->
+<p>
+	This model was built by the previous multivariable regression that we did; made with the new input of the species. There is possibly a relation between all the variables used to create the model, and the species. Now with the model prediction might be possible.
+</p>
+<h2>Predict students grades</h2>
+<p>
+	Use the file as a data set: <a target="_blank" href="/courses/entries/documents/intro-ml-R/data/student-mat.csv" download>student-mat.csv</a>. This is a semicolon separated file.
+</p>
+<!--begin.rcode students-data-load, results = "show"
+data <- read.csv("data/student-mat.csv", sep = ";")
+
+head(data)
+end.rcode-->
+<p>
+	We're going to try and predict grades; in the file we see G1-3, these correspond to different period grades, 1-3 respectively.
+</p>
+<!--begin.rcode students-data-summary, results = "show"
+summary(data)
+end.rcode-->
+<p>
+	Let's check for NA values and clean the data frame.
+</p>
+<!--begin.rcode students-data-clean, results = "show"
+any(is.na(data)) # Checking for NAs
+str(data) # Checking the factors and structure of data frame
+end.rcode-->
+<p>
+	Data set is a training data set, thus it is clean. We don't have to do anything to it. Let's plot it to visually see it.
+</p>
+<h3>Visualising student data</h3>
+<p>
+	Here we will plot only the numeric columns. 
+</p>
+<!--begin.rcode students-correlation
+num_cols <- sapply(data, is.numeric);
+# Now we filter for correlation data
+cor_data <- cor(data[,num_cols])
+end.rcode-->
+<p>
+	What we're seeing in the <code>cor_data</code> variable is a statistical correlation between all of the different variables found in the data frame. Thus, it makes sense that at we get a correlation of "1": <code>cor_data["age", "age"]; = 1.0</code>. Note that diagonal of 1s accros the table, this is because all of the features are correlated with themselves.
+</p>
+<!--begin.rcode students-correlation-print-1, results = "show"
+dim(cor_data);
+head(cor_data, 5);
+end.rcode-->
+<p>
+	Great information, but let's visualise this data.
+</p>
+<!--begin.rcode students-corrplot-1
+library("corrplot"); # For plotting correlation diagrams; more common and easy
+
+corrplot(cor_data, method = "color")
+end.rcode-->
+<p>
+	There is a high correlation between G1-3, this makes sense because a good student should continue to get good marks, and inversely. Note that mother's and father's education levels are slightly correlated.
+</p>
+<p>
+	Let's do the same thing but with "corrgram". It's a bit more complicated, but the main difference is that corrgram can take in the data frame directly, we don't have to filter or clean anything. Let's do the raw data frame.
+</p>
+<!--begin.rcode students-corrgram-1, echo = FALSE
+library("corrgram"); # For mplotting correlation diagrams
+
+corrgram(data)
+end.rcode-->
+<p>
+	We can add a bunch of additional arguments to corrgram.
+</p>
+<!--begin.rcode students-corrgram-2
+corrgram(
+	data,
+	order = TRUE,
+	lower.panel = panel.shade,
+	upper.panel = panel.pie,
+	text.panel = panel.txt,
+	gap = 0.25)
+end.rcode-->
+<p>
+	Lower panel are shaded boxes, and the upper are pie charts showing the correlation. 
+</p>
+<p>
+	Now let's plot the G3 score. This is all exploratory in order to see what the data looks like before moving on to anything else.
+</p>
+<!--begin.rcode students-hist, results = "show"
+hist(data$G3, main = "Period 3 scores", xlab = "Students")
+unique(data$G3)
+end.rcode-->
+<h3>Splitting: training/testing data</h3>
+<p>
+	Now let's do the following:
+</p>
+<ol>
+	<li>
+		Split the data into a training set and testing set.
+	</li>
+	<li>
+		Train a linear regression model.
+	</li>
+	<li>
+		Interepretting the results of our model.
+	</li>
+</ol>
+<!--begin.rcode students-split-data
+library("caTools")
+set.seed(101)
+
+sample <- sample.split(data$G3, SplitRatio = 0.7) # Splits 70% to training
+train <- subset(data, sample == TRUE)
+test <- subset(data, sample == FALSE)
+end.rcode-->
+<p>
+	What we did here is: call "caTools", set a seed to split data in a predictable way; does not need to be set for actual run, got an array of TRUE/FALSE in order to split the data with a sample.split() function from caTools, then filtered or subset from the original data variable into a train variable, and test.
+</p>
+<p>
+	<strong>These lines of code get often used, remember them</strong>.
+</p>
+<h3>Training linear regression model</h3>
+<p>
+	Here we use the lm() function for a model. This is a linear model function. Passed in is first the feature we want to predict, then tilde and a sum of the features we want to use to make that predictions. Or we can pass in all of the features (columns) from the data frame in order to make the prediction; <code>~.</code>.
+</p>
+<!--begin.rcode students-train-model, results = "show"
+model <- lm(G3 ~. , train)
+
+summary(model)
+end.rcode-->
+
+
+</body>
+</html>

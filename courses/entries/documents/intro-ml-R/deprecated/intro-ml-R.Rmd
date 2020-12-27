@@ -1,0 +1,121 @@
+---
+title: "Intro to machine learning with R"
+author: "Dereck de Mézquita"
+date: "12/04/2020"
+output:
+  html_document: 
+    number_sections: yes
+    self_contained: no
+    toc: yes
+editor_options: 
+  chunk_output_type: console
+---
+
+# Description
+
+This .Rmd is associated to the `Intro to machine learning with R` course on derecksnotes.com. This is used to produce plots and other results for the course. It will be linked and published along with the course.
+
+# Document set up
+
+```{r}
+knitr::knit2html()
+```
+
+
+```{r setup, include=FALSE}
+par(mfrow = c(1, 1)); # Reseting margins on plots
+
+knitr::opts_chunk$set(echo = TRUE, results = "hide", message = FALSE, warning = FALSE);
+```
+
+Here set the variables as described; these will determine how and what the programme executes.
+
+```{r}
+os <- "macOS"; # Select OS: macOS, linux, windows
+wd <- "/Users/Work/Coding/projects-personal/web-sites/derecksnotes/courses/entries/documents/intro-ml-R" # dirname(rstudioapi::getActiveDocumentContext()$path); # If you want to set wd manually change this variable to a string of your path
+
+setwd(wd)
+```
+
+# Linear regression
+## History
+
+In this example we try to draw a line as close to the every points that may appear on a plot. For classical linear regressior, aka "least squares method", you only need to measure the distance between the points on the Y axis.
+
+This is simplist example possible.
+
+Take the following code chunk and plot example.
+
+### Example 1
+```{r}
+x <- 1:2;
+y <- 1:2;
+
+linearReg <- function(xs, ys) {
+  fit <- lm(ys ~ xs) # Fitting linear model
+  abline(fit, col = "red") # Adds straight line to plot; (y ~ x)
+};
+
+plot(x, y,
+	 main = "Linear regression between two points",
+	 xlim = c(0.75, 2.25),
+	 ylim = c(0.75, 2.25));
+linearReg(x, y);
+```
+
+### Example 2
+
+In this example we do the regression test with the built in data set `iris`. This tracks flowers petal, sepal... etc. morphology per species.
+
+This minimises the vertical distance between the points and the line. Here we take the lowess regression to get a best fit line to all points.
+
+```{r}
+lowessReg <- function(xs, ys) {
+	fit <- lowess(xs, ys);
+	lines(fit, col = "blue"); # lowess line (x,y)
+};
+
+plot(iris$Sepal.Length,
+	 iris$Petal.Length,
+	 main = "Sepal vs petal (length)");
+
+lowessReg(iris$Sepal.Length, iris$Petal.Length);
+```
+
+Formulas for building linear regression models in R are built in the following way; `(y ~ x)`. In order to add more predictor variables to be taken into account use the `+` sign in the formula `(y ~ x + z)`.
+
+Let's redo the above plot with a linear regression model as we first did but this time attributing more predictor variables.
+
+```{r}
+plot(iris$Sepal.Length,
+	 iris$Petal.Length,
+	 main = "Sepal vs petal (length) + sepal width");
+
+abritrary_model <- lm(log(iris$Sepal.Length, base = 10) ~ iris$Petal.Length + iris$Sepal.Width, data = iris);
+
+abline(abritrary_model, col = "purple");
+```
+
+Let's break down the formulas:
+
+* `lm()`: a function for linear regression.
+
+* `log(Sepal.Length, base = 10) ~ Petal.Length + Sepal.Width`: formula for modelling taken as input.
+
+* `log(Sepal.Length, base = 10)`: the quantity we want to predict.
+
+* `Petal.Length + Sepal.Width`: variables available to make predictions.
+
+Once we have declared all those variables in the arbitrary model we can then use them for prediction:
+
+```{r}
+iris$predLog <- predict(abritrary_model, newdata = iris$Species)
+
+iris$predLog
+```
+
+
+```{r}
+
+```
+
