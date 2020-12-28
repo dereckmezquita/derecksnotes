@@ -1,53 +1,79 @@
-<link rel="stylesheet" href="/tools/entries/dgbQrGen/css/dgbQr.css">
-<script type="text/javascript" src="/libraries/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="/tools/entries/dgbQrGen/jquery.qr.js"></script>
+<style>
+    #qr {
+        padding-top: 40px;
+        max-width: 100%;
+    }
+
+    #qrTextBox {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        min-width: 250px;
+        display: block;
+        margin: auto;
+    }
+
+    label {
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+        font-weight: bold;
+    }
+</style>
 
 <title>DGB QR Code Generator</title>
 
-    <h1>DigiByte Custom QR Code Generator</h1>
-        <p>
-            Simply enter your address below and then hit enter. A custom QR code with the DGB logo will be generated. Be sure to check the validity of the code. I do not take responsibility for any damages or losses.
-        </p>
-        <div id="qr">
-        
-        </div>
-    
-        <script>
-        
-            let qrimage = $('<img src="/tools/entries/dgbQrGen/logo.png"/>');
-            
-            function updateQR(text) {
-                $('#qr_canvas').remove();
-                let address = text;
-                let qs = {};
-                qs.text = "digibyte:"+address;
-                qs.size = 528;
-                qs.image = qrimage[0];
-                qs.mode = 4;
-                qs.mSize = 0.30;
-                qs.ecLevel = 'Q';
-                $('#qr').css('height',qs.size+'px');
-                $('#qr').qrcode(qs);
-            }
-            
-            qrimage.on('load',function() {
-            
-                    let address = 'DLe7skgT5SoN44PLQPzgE8FZ9ZhmdWPaNY';
-                    let qs = {};
-                    qs.text = "digibyte:"+address;
-                    qs.size = 450;
-                    qs.image = qrimage[0];
-                    qs.mode = 4;
-                    qs.mSize = 0.30;
-                    qs.ecLevel = 'Q';
-                    $('#qr').css('height',qs.size+'px');
-                    $('#qr').qrcode(qs);
+<h1>DigiByte Custom QR Code Generator</h1>
 
-            });
-        
-        </script>
-        
-        <div>
-            <label for="dgbAddres">Enter DigiByte Address Here:</label>
-            <input type="text" id="qrTextBox" onchange="updateQR(document.getElementById('qrTextBox').value)"/>
-        </div>
+<p>
+    Simply enter your address below and then hit enter. A custom QR code with the DGB logo will be generated. Be sure to
+    check the validity of the code. I do not take responsibility for any damages or losses.
+</p>
+
+<div class="centre">
+    <div id="qr">
+
+    </div>
+</div>
+
+<script>
+    let qrimage = $('<img src="/tools/entries/documents/qrGenerator/dgb-logo.png"/>');
+
+    function updateQR(text) {
+        $('#qr_canvas').remove();
+        let address = text;
+        let qs = {};
+        qs.text = "digibyte:" + address;
+        qs.size = 528;
+        qs.image = qrimage[0];
+        qs.mode = 4;
+        qs.mSize = 0.30;
+        qs.ecLevel = 'Q';
+        $('#qr').css('height', qs.size + 'px');
+        $('#qr').qrcode(qs);
+    }
+
+    qrimage.on('load', function () {
+
+        let address = 'DLe7skgT5SoN44PLQPzgE8FZ9ZhmdWPaNY';
+        let qs = {};
+        qs.text = "digibyte:" + address;
+        qs.size = 450;
+        qs.image = qrimage[0];
+        qs.mode = 4;
+        qs.mSize = 0.30;
+        qs.ecLevel = 'Q';
+        $('#qr').css('height', qs.size + 'px');
+        $('#qr').qrcode(qs);
+
+    });
+
+</script>
+
+<div>
+    <label for="dgbAddres">Enter DigiByte Address Here:</label>
+    <input type="text" id="qrTextBox" onchange="updateQR(document.getElementById('qrTextBox').value)" />
+</div>
+
+<script type="text/javascript" src="/libraries/jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/libraries/jquery/jquery.qr.js"></script>
