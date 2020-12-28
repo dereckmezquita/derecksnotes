@@ -1,3 +1,11 @@
+<style>
+    iframe {
+        /* background: none; */
+        border: 3px solid grey;
+        /* box-shadow: none; */
+    }
+</style>
+
 <title>Data Science: natural language processing & network inference</title>
 <h1>Data Science: natural language processing & network inference</h1>
 
@@ -5,53 +13,52 @@
     The goal of this project is to analyse chat data with my girlfriend; apply statistical methods, graph theory, and other data science techniques.
 </p>
 <p>
-    Please note that this project is presented in knitted interactive `.html` reports, you can obtain these by downloading them from the github repo at the directory [./reports](./reports) *or* you can visit them hosted on my website at: <a href="/ds-portfolio/entries/documents/" target="_blank">derecksnotes.com: ds-portfolio</a>.
+    Please note that this project is presented in knitted interactive <code>.html</code> reports, you can view these below or by downloading them from the github repo at the directory <code>./reports/</code> *or* you can visit them hosted on my website at: <a href="/ds-portfolio/entries/documents/" target="_blank">derecksnotes.com: ds-portfolio</a>.
 </p>
 
+<h2>Project structure</h2>
 <p>
-    This project is broken up into three big sub-projects. The project structure is as follows (hosted report links):
-    <ul>
-        <li>
-            Text mining, statistical, and exploratory analysis: <a href="/ds-portfolio/entries/documents/text-analysis.html" target="_blank">derecksnotes.com: text-analysis.html</a>.
-        </li>
-        <li>
-            Word association network inference: <a href="/ds-portfolio/entries/documents/word-network-inference.html" target="_blank">derecksnotes.com: word-network-inference.html</a>.
-        </li>
-        <li>
-            Word association/network topological analysis and visualisation: <a href="/ds-portfolio/entries/documents/word-network-analysis.html" target="_blank">derecksnotes.com: word-network-analysis.html</a>.
-            <ul>
-                <li>
-                    <strong>Bonus -</strong> interactive visualisation of network: <a href="/ds-portfolio/entries/documents/word-network-interactive.html" target="_blank">derecksnotes.com: word-network-interactive.html</a>.
-                </li>
-            </ul>
-        </li>
-    </ul>
+    Follow these links for standalone version of the reports; otherwise displayed below in iframes.
 </p>
-<p>
-    Work on this project is done with:     
-</p>
-<ul>
+
+<ol>
     <li>
-        [Modified multicore R language](https://github.com/dereckdemezquita/multicore-R-benchmark) v4.0.2.
+        Text mining, statistical, and exploratory analysis: <a href="/ds-portfolio/entries/documents/text-analysis.html" target="_blank">derecksnotes.com: text-analysis.html</a>.
     </li>
     <li>
-        RStudio v1.2.5019. 
+        Word association network inference: <a href="/ds-portfolio/entries/documents/word-network-inference.html" target="_blank">derecksnotes.com: word-network-inference.html</a>.
     </li>
     <li>
-        ["rwhatsapp"](https://cran.r-project.org/web/packages/rwhatsapp/readme/README.html) package is used for reading in the data.
+        Word association/network topological analysis and visualisation: <a href="/ds-portfolio/entries/documents/word-network-analysis.html" target="_blank">derecksnotes.com: word-network-analysis.html</a>.
+        <ol>
+            <li>
+                <strong>Bonus -</strong> interactive visualisation of network: <a href="/ds-portfolio/entries/documents/word-network-interactive.html" target="_blank">derecksnotes.com: word-network-interactive.html</a>.
+            </li>
+        </ul>
     </li>
-    <li>
-        The statistical analysis done is inspired by its documentation and the O'Reilly book [Text Mining with R](https://www.tidytextmining.com) by Julia Silge & David Robinson.
-    </li>
-</ul>
+</ol>
+
+<h2>Project reports and results</h2>
+
+<div style="margin:0px;padding:0px;">
+    <iframe src="/ds-portfolio/entries/documents/text-analysis.html" onload="this.style.height='900px';" width="100%" style="overflow: hidden;"></iframe>
+</div>
+
+<div style="margin:0px;padding:0px;">
+    <iframe src="/ds-portfolio/entries/documents/word-network-inference.html" onload="this.style.height='900px';" width="100%" style="overflow: hidden;"></iframe>
+</div>
+
+<div style="margin:0px;padding:0px;">
+    <iframe src="/ds-portfolio/entries/documents/word-network-analysis.html" onload="this.style.height='900px';" width="100%" style="overflow: hidden;"></iframe>
+</div>
+
+
+<div style="margin:0px;padding:0px;">
+    <iframe src="/ds-portfolio/entries/documents/word-network-interactive.html" onload="this.style.height='900px';" width="100%" style="overflow: hidden;"></iframe>
+</div>
 
 <ul>
-    <li>
-        <a href="/ds-portfolio/entries/documents/text-analysis.html">text-analysis.html</a>
-    </li>
-    <li>
-        <a href="/ds-portfolio/entries/documents/text-analysis.html">text-analysis.html</a>
-    </li>
+
 </ul>
 
 <!-- <style>
@@ -84,4 +91,18 @@
     <li>
         Inspired by the documentation on the library: <a target="_blank" href="https://cran.r-project.org/web/packages/rwhatsapp/vignettes/Text_Analysis_using_WhatsApp_data.html"><code>library(rwhatsapp)</code></a>
     </li>
+    <li>
+        <a href="https://github.com/dereckdemezquita/multicore-R-benchmark">Modified multicore R language - v4.0.3</a>.
+    </li>
+    <li>
+        RStudio v1.2.5019.
+    </li>
+    <li>
+        <a href="https://cran.r-project.org/web/packages/rwhatsapp/readme/README.html">"rwhatsapp"</a> package is used for reading in the data.
+    </li>
+    <li>
+        The statistical analysis done is inspired by its documentation and the O'Reilly book<a href="https://www.tidytextmining.com">Text Mining with R</a> by Julia Silge & David Robinson.
+    </li>
 </ol>
+
+
