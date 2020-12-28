@@ -53,7 +53,7 @@
 
 
 <!-- JS Libraries -->
-    <script type="text/javascript" src="/libraries/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/libraries/jquery/jquery-3.3.1.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <!-- Syntax Highlighter -->
