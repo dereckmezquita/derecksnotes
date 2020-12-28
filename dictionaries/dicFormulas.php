@@ -122,9 +122,7 @@
                                     </li>
 
                                     <figure class="invertImageColours">
-                                        <a href="imagesDictionaries/20181124_goldenRatio.svg"><img
-                                                src="imagesDictionaries/20181124_goldenRatio.svg"
-                                                alt="Golden Ratio"></a>
+                                        <img src="/dictionaries/documents/formulas/20181124_goldenRatio.svg" alt="Golden Ratio">
                                         <figcaption>An example of the golden ratio; an ideal example.</figcaption>
                                     </figure>
 

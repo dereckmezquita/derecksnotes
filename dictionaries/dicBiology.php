@@ -99,7 +99,7 @@
                                 <li class="wordDefined" data-dictionary="genBio" data-src="origDereck">
                                     <a class="dicWord" data-category="genBio" id="BDic_agarose"><strong>Agarose</strong></a> - Agarose is a sugar or polysaccharide. It is a main component of <a href="#BDic_agar">agar</a>, which is used a solid medium for microbial cultures. Agarose is used alone for the separation of DNA fragments in <a href="#BDic_electrophoresis">electrophoretic gels</a> and <a href="#BDic_chromatography">chromatographic</a> protein purification.
                                     <figure>
-                                        <img class="lazy" data-src="imagesDictionaries/imagesBDic/agarose.svg">
+                                        <img class="lazy" data-src="/dictionaries/documents/biology/agarose.svg">
                                         <figcaption>Molecular structure of the Agarose molecule.</figcaption>
                                     </figure>
                                     <p>
@@ -115,7 +115,7 @@
                                 <li class="wordDefined" data-dictionary="genBio" data-src="origDereck">
                                     <a class="dicWord" data-category="genBio" id="BDic_alphaHelix"><strong>Alpha Helix</strong></a> - An alpha helix is an <a href="#BDic_aminoAcid">amino acid</a> sequence pattern that results in a <a href="#BDic_secondaryStructure">secondary structure</a> in the form of a right handed helix. This helix is created by the donation of a hydrogen bond from the backbone <span class="chemical">N-H</a> groups to the <span class="chemical">C=O</a> groups. These interactions happen on average every three to four <a href="#BDic_aminoAcid">amino acids</a> in a sequence, with about 13 atoms involved in one ring. See also <a href="#BDic_betaSheet">&beta;-sheet</a>.
                                     <figure>
-                                        <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesBDic/humanGrowthHormone.png">
+                                        <img class="lazy" data-src="/dictionaries/documents/biology/humanGrowthHormone.png">
                                         <figcaption>Human growth hormon cartoon rendition, depicting various alpha helices.</figcaption>
                                     </figure>
                                 </li>
@@ -831,7 +831,7 @@
                                 <li class="wordDefined" data-dictionary="genBio" data-src="origDereck">
                                     <a class="dicWord" data-category="genBio" id="BDic_dna"><strong>DNA (Desoxyribonucleic Acid)</strong></a> - A <a href="#BDic_molecule">molecule</a> (<a href="#BDic_nucleicAcid">nucleic acid</a>) which carries most of the genetic instructions used in the development, function and reproduction of all known living organisms and many <a href="#BDic_virus">viruses</a>. DNA is the primary compenent of <a href="#BDic_chromosome">chromosomes</a>.
                                     <figure>
-                                        <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesBDic/dna.jpg">
+                                        <img class="lazy" data-src="/dictionaries/documents/biology/dna.jpg">
                                         <figcaption>DNA a double helix molecule, the current known basis for life.</figcaption>
                                     </figure>
                                     <p>
@@ -946,7 +946,7 @@
                                             $$
                                         </div>
                                         <figure>
-                                            <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesBDic/doubleInverse1.svg">
+                                            <img class="lazy" data-src="/dictionaries/documents/biology/doubleInverse1.svg">
                                             <figcaption>An example of the double inverse plot. Multiple points must be calculated from the resulting formula. The condition that varies is concetration of the substrate experimentally: 1/[s].</figcaption>
                                         </figure>
                                         <p>
@@ -956,7 +956,7 @@
                                             This method can be used to determine enzyme cinetics: K<sub>m</sub>, V<sub>max</sub>. The y-intercept of the graph is equivalent to the inverse of V<sub>max</sub>, and the x-intercept represents -1/KV<sub>m</sub>.
                                         </p>
                                         <figure>
-                                            <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesBDic/doubleInverse2.gif">
+                                            <img class="lazy" data-src="/dictionaries/documents/biology/doubleInverse2.gif">
                                             <figcaption>Enzyme inhibition shown using the double inverse. The different motifs formed by the curves allows us to deduce the type of inhibiton.</figcaption>
                                         </figure>
                                         <p>
@@ -1506,7 +1506,7 @@
                                 <li class="wordDefined" data-dictionary="genBio" data-src="origDereck">
                                     <a class="dicWord" data-category="genBio" id="BDic_inhibition"><strong>Inhibition</strong></a> - A <a href="#BDic_molecule">molecule</a> that can cause the arrest or tamper the activity of a reaction is called an inhibitor. In the context of biology an inhibitor has a negative effect on a reaction catalysed by an enzyme. There are multiple cases into which an inhibition may be classed:
                                     <figure>
-                                        <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesBDic/inhibitionType.svg">
+                                        <img class="lazy" data-src="/dictionaries/documents/biology/inhibitionType.svg">
                                         <figcaption>Types of inhibition, the concentration of of the inhibitor is the only thing that changes.</figcaption>
                                     </figure>
                                     <ul>
@@ -1823,7 +1823,7 @@
                                         There are a few terms to take into consideration before attacking the formula: v<sub>max</sub> is the maximal speed at which the reaction will take place, (v<sub>max</sub>/2) is half maximal speed, which brings us to k<sub>m</sub> or the substrate concentration at which the rate of reaction will half speed.
                                     </p>
                                     <figure>
-                                        <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesBDic/michaelisMenten.svg">
+                                        <img class="lazy" data-src="/dictionaries/documents/biology/michaelisMenten.svg">
                                         <figcaption>A curve demonstrating a generique enzyme substrate reaction. The graph shows, a reaction rate/speed (<em>concentration/s</em>), in relation to a substrate concentration.</figcaption>
                                     </figure>
                                     <div class="mathsFormulas">
@@ -2420,7 +2420,7 @@
                                 <li class="wordDefined" data-dictionary="genBio" data-src="origDereck">
                                     <a class="dicWord" data-category="genBio" id="BDic_protein"><strong>Protein</strong></a> - A <a href="#BDic_polymer">polymer</a> of <a href="#BDic_aminoAcid">amino acids</a> that typically folds into a particular shape; though <a href="#BDic_protein">proteins</a> with less-defined shapes exist. Some <a href="#BDic_protein">proteins</a> are multimeric, meaning they are a complex of many copies of the same <a href="#BDic_aminoAcid">amino acid</a> sequences.
                                     <figure>
-                                        <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesBDic/protein.png">
+                                        <img class="lazy" data-src="/dictionaries/documents/biology/protein.png">
                                         <figcaption>Protein strucutre, <a href="#BDic_primaryStructure">primary structure</a> is the sequence of <a href="#BDic_aminoAcid">amino acids</a>, secondary <a href="#BDic_alphaHelix">&alpha; helices</a> and <a href="#BDic_betaSheet">&beta; sheets</a>, <a href="#BDic_tertiaryStructure">tertiary structure</a> the association of <a href="#BDic_secondaryStructure">secondary strucutres</a> and <a href="#BDic_quaternaryStrucutre">quaternary strucutres</a> the association of <a href="#BDic_tertiaryStructure">tertiary structures</a>.</figcaption>
                                     </figure>
                                     <p>
@@ -3026,7 +3026,7 @@
                                 <li class="wordDefined" data-dictionary="genBio" data-src="origDereck">
                                     <a class="dicWord" data-category="genBio" id="BDic_twoSubstrateEnzyme"><strong>Two Substrate Enzyme</strong></a> - An enzyme mechanism refers to the way a reaction occurs, that is the order of binding. Here we consider an enzyme that intakes two different substrates, the reaction can happen in five different ways:
                                         <figure>
-                                            <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesBDic/twoMechanismEnzyme.svg">
+                                            <img class="lazy" data-src="/dictionaries/documents/biology/twoMechanismEnzyme.svg">
                                             <figcaption>Enzyme with two substrates can have various different mechanisms. Described by the diagrams, also shown the double inverses associated to the reactions and the substrates.</figcaption>
                                         </figure>
                                         <ol>

@@ -143,7 +143,7 @@
                                             Aromaticity does not necessarily indicate an odour. This misnomer comes from the association initially given by August Wilhelm Hofmann in 1855 who studied a class of benzene molecules; which did indeed emit odours.
                                         </p>
                                         <figure>
-                                            <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesCDic/benzenResonance.png">
+                                            <img class="lazy" data-src="/dictionaries/documents/chemistry/benzenResonance.png">
                                             <figcaption>Benzene resonance structures.</figcaption>
                                         </figure>
                                         <p>
@@ -153,7 +153,7 @@
                                                 Bond lengths in such a strucutre are the intermediate of the two composing representations. X-ray diffraction has shown that all six carbon-carbon bonds in benzene are of the same length: 1.4 &#8491;. C-C double bonds are typically at 1.35 &#8491;, and single bonds at 1.47 &#8491;.
                                         </p>
                                         <figure>
-                                            <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesCDic/benzenPiOrbitals.png">
+                                            <img class="lazy" data-src="/dictionaries/documents/chemistry/benzenPiOrbitals.png">
                                             <figcaption>The &pi; orbitals allow for the double bond stick out of the ring, this allows for the double bond formation; consequently these orbitals can then share any electrons involved.</figcaption>
                                         </figure>
                                         <p>
@@ -198,14 +198,14 @@
                                     <li class="wordDefined" data-dictionary="orgChem" data-src="dereck">
                                         <a class="dicWord" data-category="orgChem" id="CDic_benzene"><strong>Benzene (C<sub>6</sub>H<sub>6</sub>)</strong></a> - An aromtaic organic molecule of the formula C<sub>6</sub>H<sub>6</sub>, molar mass 78.114 g&middot;mol<sup>-1</sup>. It is cyclic and contains only Carbon and Hydrogen thus it is called a hydrocarbon.
                                         <figure>
-                                            <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesCDic/benzeneRepresentations.png">
+                                            <img class="lazy" data-src="/dictionaries/documents/chemistry/benzeneRepresentations.png">
                                             <figcaption>Various representations of benzene including the hybrid resonance strucutre.</figcaption>
                                         </figure>
                                         <p>
                                             Benzene is naturally found in petroleum and is a foundational chemical in petrochemistry: production of plastics, pharmaceuticals, dyes, detergents, pesticides, rubber, and other important molecules.
                                         </p>
                                         <figure>
-                                            <img class="lazy" data-src="/dictionaries/imagesDictionaries/imagesCDic/benzeneUses.png">
+                                            <img class="lazy" data-src="/dictionaries/documents/chemistry/benzeneUses.png">
                                             <figcaption>A chart demonstrating the various uses for benzene and derivative molecules possible.</figcaption>
                                         </figure>
                                         <p>
