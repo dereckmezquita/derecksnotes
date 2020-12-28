@@ -47,6 +47,12 @@ Math formulas are created using the MathJax.js library. Images are mostly drawn 
 find . -name '.DS_Store' -type f -delete
 ```
 
+- Fix permissions errors: 403
+
+```{bash}
+chmod -R 755 directory/.../...
+```
+
 # Copyright
 
 I reserve all rights for this website, and any code or content found in this repository. You may not copy this code or content. This is to serve only as an educational resource, and any use or reference of/to the content herein must be credited to the author: Dereck de Mézquita. 
