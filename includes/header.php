@@ -141,7 +141,7 @@
 <!-- HEADER -->
     <header>
         <a href="/index.php" class="homePageLink">
-            <span class="headerEst">Established California 2017</span>
+            <span class="headerEst">Established France 2017</span>
             <span class="headerSlogan">The online brain of Dereck <span class="headerAuthorTitle">de </span>M&#275;zquita</span>
             <span class="headerSiteName">Dereck's Notes</span>
             <!-- <span class="headerSiteName">

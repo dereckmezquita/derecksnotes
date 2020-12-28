@@ -1,17 +1,3 @@
-// Toggle time-zones
-let locals = [
-    "San Francisco",
-    "New York",
-    "Paris",
-    "Moscow",
-    "Hong Kong",
-    "Tokyo"
-];
-
-function toggleZones() {
-
-};
-
 // Clock
 setInterval(function() {
     const currentTime = new Date();

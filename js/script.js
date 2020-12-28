@@ -44,7 +44,6 @@ $(document).ready(function () {
     });
 });
 
-
 // handle links with @href started with '#' only slows down normal animation and does a smooth scroll
 $(document).on('click', 'a[href^="#"]', function (e) {
     // target element id
@@ -79,61 +78,63 @@ function flexNav() {
 };
 
 // Change class attribute on wrapper so that it can resize to 1000px min, want when sidebar, gone when no sidebar
-let mainWrapper = document.querySelector(".contentWrapper");
-let sideDetect = document.querySelector(".sideBar");
+(() => {
+    let mainWrapper = document.querySelector(".contentWrapper");
+    let sideDetect = document.querySelector(".sideBar");
 
-let mainW = !(mainWrapper === null),
-    sideW = !(sideDetect === null);
+    let mainW = !(mainWrapper === null),
+        sideW = !(sideDetect === null);
 
-if (sideW && mainW) {
-    mainWrapper = mainWrapper.setAttribute("class", "longContent");
-}
+    if (sideW && mainW) {
+        mainWrapper = mainWrapper.setAttribute("class", "longContent");
+    }
+})();
 
 // Code for changing styles; compatibility of browsers
-let sBrowser, sUsrAg = navigator.userAgent;
+(() => {
+    let sBrowser, sUsrAg = navigator.userAgent;
 
-// The order matters here, and this may report false positives for unlisted browsers.
-if (sUsrAg.indexOf("Firefox") > -1) {
-    sBrowser = "Mozilla Firefox";
-    // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
-    sBrowser = "Opera";
-    //"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
-} else if (sUsrAg.indexOf("Trident") > -1) {
-    sBrowser = "Microsoft Internet Explorer";
-    // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
-} else if (sUsrAg.indexOf("Edge") > -1) {
-    sBrowser = "Microsoft Edge";
-    // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-} else if (sUsrAg.indexOf("Chrome") > -1) {
-    sBrowser = "Google Chrome or Chromium";
-    // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
+    // The order matters here, and this may report false positives for unlisted browsers.
+    if (sUsrAg.indexOf("Firefox") > -1) {
+        sBrowser = "Mozilla Firefox";
+        // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
+    } else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
+        sBrowser = "Opera";
+        //"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
+    } else if (sUsrAg.indexOf("Trident") > -1) {
+        sBrowser = "Microsoft Internet Explorer";
+        // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
+    } else if (sUsrAg.indexOf("Edge") > -1) {
+        sBrowser = "Microsoft Edge";
+        // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+    } else if (sUsrAg.indexOf("Chrome") > -1) {
+        sBrowser = "Google Chrome or Chromium";
+        // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
 
-    // Styles for Chrome most users are using chrome
-    // Replace the webkit blur css properties with other colours
-    let frostedBackgrounds = document.querySelector(".infoBar");
+        // Styles for Chrome most users are using chrome
+        // Replace the webkit blur css properties with other colours
+        let frostedBackgrounds = document.querySelector(".infoBar");
 
-    frostedBackgrounds.style.background = "rgba(255, 255, 255, 0.925)";
-    frostedBackgrounds.style.border = "1px solid #CCC";
-    frostedBackgrounds.style.boxShadow = "1px 1px 10px rgba(153, 153, 153, 0.5)";
-} else if (sUsrAg.indexOf("Safari") > -1) {
-    sBrowser = "Apple Safari";
-    // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
-} else {
-    sBrowser = "unknown";
-}
+        frostedBackgrounds.style.background = "rgba(255, 255, 255, 0.925)";
+        frostedBackgrounds.style.border = "1px solid #CCC";
+        frostedBackgrounds.style.boxShadow = "1px 1px 10px rgba(153, 153, 153, 0.5)";
+    } else if (sUsrAg.indexOf("Safari") > -1) {
+        sBrowser = "Apple Safari";
+        // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
+    } else {
+        sBrowser = "unknown";
+    }
 
-console.log("You are using: " + sBrowser);
+    console.log("You are using: " + sBrowser);
+})();
 
 // drop caps
-function dropCaps() {
-    // Drop caps for Chrome
+(() => {
     window.addEventListener("entriesLoaded", function () {
-        let entries = document.querySelectorAll(".entrySummary");
+        const entries = document.querySelectorAll(".entrySummary");
 
         for (let entry of entries) {
             let first = entry.innerHTML.charAt(0);
-
             entry.innerHTML = `<span class="drop-text">${first}</span>${entry.innerHTML.substr(1)}`;
         }
 
@@ -141,40 +142,41 @@ function dropCaps() {
         if (!para) {
             para = document.querySelector("article p");
         }
+
         if (para) {
-            let first = para.innerHTML.trim().charAt(0);
-            let rest = para.innerHTML.trim().substr(1)
+            first = para.innerHTML.trim().charAt(0);
+            const rest = para.innerHTML.trim().substr(1)
             para.innerHTML = `<span class="drop-text">${first}</span>${rest}`;
         }
     });
-}
-dropCaps()
+})();
 
 // Clickable images
-let oldParent = document.querySelectorAll("figure");
-let imglinks = [];
+(() => {
+    const oldParent = document.querySelectorAll("figure");
+    const imglinks = [];
 
-for(let i = 0; i < oldParent.length; i++) {
-    let figures = oldParent[i];
-    let imgs = oldParent[i].children[0];
-    let figcaptions = oldParent[i].children[1];
-    
-    let imgsDataSrc = imgs.getAttribute("data-src");
-    let imgsSrc = imgs.getAttribute("src");
+    for (let i = 0; i < oldParent.length; i++) {
+        const imgs = oldParent[i].children[0];
+        const figcaptions = oldParent[i].children[1];
 
-    if(imgsDataSrc !== null) {
-        imglinks.push(imgsDataSrc);
-    } else {
-        imglinks.push(imgsSrc);
-    }
+        const imgsDataSrc = imgs.getAttribute("data-src");
+        const imgsSrc = imgs.getAttribute("src");
 
-    let atag = document.createElement("a");
-    atag.setAttribute("target", "_blank");
-    atag.setAttribute("href", imglinks[i]);
-    figures.appendChild(atag);
+        if (imgsDataSrc !== null) {
+            imglinks.push(imgsDataSrc);
+        } else {
+            imglinks.push(imgsSrc);
+        }
 
-    imgs.remove();
-    figcaptions.remove();
-    atag.appendChild(imgs);
-    figures.appendChild(figcaptions);
-};
+        const atag = document.createElement("a");
+        atag.setAttribute("target", "_blank");
+        atag.setAttribute("href", imglinks[i]);
+        oldParent[i].appendChild(atag);
+
+        imgs.remove();
+        figcaptions.remove();
+        atag.appendChild(imgs);
+        oldParent[i].appendChild(figcaptions);
+    };
+})();
