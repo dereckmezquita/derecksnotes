@@ -322,6 +322,18 @@ body {
         border-left: 3px solid lightgreen;
     }
 
+    pre {
+        padding: 10px;
+        tab-size: 4;
+        border: 1px solid $inputBorderLight;
+        border-radius: 5px;
+        font-size: 12px;
+
+        // white-space: pre-wrap; 
+        overflow-x: auto;
+        // overflow-x: scroll;
+    }
+
     button {
         margin: 10px;
         float: right;
