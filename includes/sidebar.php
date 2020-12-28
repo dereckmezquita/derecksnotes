@@ -38,18 +38,24 @@
             This website is made with the following technologies:
             <ul>
                 <li>
-                    HTML5/CSS/SASS
-                </li>
-                <li>
                     JavaScript/PHP
                 </li>
                 <li>
-                    SQL and R
+                    HTML5/CSS/SASS
+                </li>
+                <li>
+                    R, and knited R documents
+                </li>
+                <li>
+                    Progressive web app technologies
+                </li>
+                <li>
+                    SQL database
                 </li>
             </ul>
         </p>
         <p>
-            If you'd like to know more on how this website was built you can find all the source code on my github page: <a href="https://github.com/dereckdemezquita/derecksnotes" target="_blank">github: dereckdemezquita/derecksnotes</a>
+            If you'd like to know more on how this website was built you can find all the source code on my github page: <a href="https://github.com/dereckdemezquita/derecksnotes" target="_blank">github: dereckdemezquita/derecksnotes</a>.
         </p>
         <p>
             Math formulas are created using the MathJax.js library. Images are mostly drawn by hand on an iPad Pro using the Apple Pencil. Mind-maps using MindNode 5, and any protein visualisations or animations using Blender unless specified otherwise.

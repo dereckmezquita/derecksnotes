@@ -23,6 +23,28 @@
             ],
             "likes": 0,
             "published": "Yes"
+        },
+        {
+            "name": "derecksnotes",
+            "author": "Dereck de Mézquita",
+            "displayName": "derecksnotes.com",
+            "image": "/siteImages/allPngs/1.png",
+            "date": {
+                "year": "2017",
+                "month": "12",
+                "day": "24"
+            },
+            "slogan": "Red ruby passion.",
+            "summary": "This very website is 100% custom made by yours truly! It took me a number of years to perfect the styling. The content is a continual effort.",
+            "primaryTag": "Computer Science",
+            "tags": [
+                "Programming",
+                "Web technologies",
+                "Computer Science",
+                "Engineering"
+            ],
+            "likes": 0,
+            "published": "Yes"
         }
     ]
 }
