@@ -31,11 +31,28 @@
     </div>
 
         <h2>About</h2>
-            <p>
-                Welcome to this online reference library; the online brain of Dereck de Mezquita. Here you will find various resources all dedicated to making sciencing easier: a <a href="/dictionaries/dicBiology.php">biology dictionary</a>, a <a href="/dictionaries/dicChemistry.php">chemistry dictionary</a>, a <a href="/references/methods/methods.php">library of methods</a>, <a href="/tools.php">bioinformatic tools/calculators</a>/calculators, art galleries and more.
-            </p>
-            <p>
-                Math formulas are created using the MathJax.js library. Images are mostly drawn by hand on an iPad Pro using the Apple Pencil. Mind-maps using MindNode 5, and any protein visualisations or animations using Blender unless specified otherwise. All calculators are made with JavaScript by myself, unless specified otherwise.
-            </p>
+        <p>
+            Checkout the <a href="/index.php">blog</a>, webapps/calculators <a href="/tools.php">tools</a>, dictionaries <a href="/dictionaries.php">dictionaries</a>, and my <a href="/ds-portfolio.php">portfolio</a> demonstrating some of my work, including this website!
+        </p>
+        <p>
+            This website is made with the following technologies:
+            <ul>
+                <li>
+                    HTML5/CSS/SASS
+                </li>
+                <li>
+                    JavaScript/PHP
+                </li>
+                <li>
+                    SQL and R
+                </li>
+            </ul>
+        </p>
+        <p>
+            If you'd like to know more on how this website was built you can find all the source code on my github page: <a href="https://github.com/dereckdemezquita/derecksnotes" target="_blank">github: dereckdemezquita/derecksnotes</a>
+        </p>
+        <p>
+            Math formulas are created using the MathJax.js library. Images are mostly drawn by hand on an iPad Pro using the Apple Pencil. Mind-maps using MindNode 5, and any protein visualisations or animations using Blender unless specified otherwise.
+        </p>
     </div>
 </div>

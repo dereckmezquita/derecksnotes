@@ -4,6 +4,8 @@ temp
 **/*.zip
 sftp.json
 
+/styles/css
+
 ignored-files
 in-progress
 in-progress.php
