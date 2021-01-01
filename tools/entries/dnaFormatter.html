@@ -57,35 +57,90 @@ ATG    TGC      ATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATG    TGCATGCTAAGTA AT
 <div class="data-input">Formatted DNA Sequence outputs here:</div>
 <textarea type="text" class="spacer-output" title="Formatted sequence will appear here."></textarea>
 
+<h2>Source code</h2>
+
+<p>
+    You can view the JavaScript code below or find it at the github repo for this paga: <a href="https://github.com/dereckdemezquita/derecksnotes/blob/master/tools/entries/dnaFormatter.html">github.com/dereckdemezquita/derecksnotes/blob/master/tools/entries/dnaFormatter.html</a>.
+</p>
+
+<pre class="brush: js">
+    const spacerButton = document.querySelector(".spacer-button");
+
+    spacerButton.addEventListener("click", () => {
+        const dnaInput = document.querySelector(".spacer-input").value; // Get input data
+        const uppercaseInput = document.querySelector(".spacer-uppercase").checked; // Check uppercase selection
+        const spacerNumber = parseInt(document.querySelector(".spacer-number").value); // Check n spacing selection
+
+        function spaceStr(str, n) {
+            document.querySelector(".spacer-output").value = ""; // Clear output on each run
+            let lines = str.split("\n"); // Split into an array at the new lines; new lines become empty strings
+
+            lines = lines.filter(l => l !== ""); // Remove new lines empty strings
+            lines = lines.map(l => l.split(" ").join("")); // Split into an array of characters; join with no spacing
+            
+            // map creates a new modified array from the results of a given function
+            lines = lines.map(l => 
+                l.split("").reduce((a, e, i) => a + e + (i % n === (n - 1) ? " " : ""), "")
+                // reduce executes a function over each element of an array
+                // it has three main parts, accumulator, element, index
+            ).join("\n\n"); // join concatenates all elements together with a given separator
+
+            if (uppercaseInput !== true) { // leave text as is
+                document.querySelector(".spacer-output").value += lines;
+            } else { // uppercase text
+                document.querySelector(".spacer-output").value += lines.toUpperCase();
+            }
+        }
+
+        spaceStr(dnaInput, spacerNumber);
+    });
+</pre>
+
+<!-- <a aria-describedby="foot-label" href="#"></a> -->
+<ol class="foot-notes">
+    <div class="foot-notes-head">
+        Footnotes:
+        <li>
+            Source code: <a href="https://github.com/dereckdemezquita/derecksnotes/blob/master/tools/entries/dnaFormatter.html">github.com/dereckdemezquita/derecksnotes/blob/master/tools/entries/dnaFormatter.html</a>.
+        </li>
+    </div>
+</ol>
 
 <script>
     const spacerButton = document.querySelector(".spacer-button");
 
     spacerButton.addEventListener("click", () => {
-        const dnaInput = document.querySelector(".spacer-input").value;
-        const uppercaseInput = document.querySelector(".spacer-uppercase").checked;
-        const spacerNumber = parseInt(document.querySelector(".spacer-number").value);
+        const dnaInput = document.querySelector(".spacer-input").value; // Get input data
+        const uppercaseInput = document.querySelector(".spacer-uppercase").checked; // Check uppercase selection
+        const spacerNumber = parseInt(document.querySelector(".spacer-number").value); // Check n spacing selection
 
         function spaceStr(str, n) {
-            document.querySelector(".spacer-output").value = "";
+            document.querySelector(".spacer-output").value = ""; // Clear output on each run
             let lines = str.split("\n"); // Split into an array at the new lines; new lines become empty strings
 
             lines = lines.filter(l => l !== ""); // Remove new lines empty strings
             lines = lines.map(l => l.split(" ").join("")); // Split into an array of characters; join with no spacing
-            console.log(lines);
-            lines = lines.map(l =>
+            
+            // map creates a new modified array from the results of a given function
+            lines = lines.map(l => 
                 l.split("").reduce((a, e, i) => a + e + (i % n === (n - 1) ? " " : ""), "")
-            ).join("\n\n");
-            console.log(lines);
+                // reduce executes a function over each element of an array
+                // it has three main parts, accumulator, element, index
+            ).join("\n\n"); // join concatenates all elements together with a given separator
 
-            if (uppercaseInput !== true) {
+            if (uppercaseInput !== true) { // leave text as is
                 document.querySelector(".spacer-output").value += lines;
-            } else {
+            } else { // uppercase text
                 document.querySelector(".spacer-output").value += lines.toUpperCase();
             }
         }
+
         spaceStr(dnaInput, spacerNumber);
     });
 </script>
 
 <!-- ATGCATGTCTAAGTA -->
+
+<script type="text/javascript">
+    SyntaxHighlighter.all()
+</script>
