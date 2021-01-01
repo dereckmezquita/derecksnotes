@@ -2,7 +2,7 @@
     .seqs {
         display: block;
         width: 100%;
-        height: 150px;
+        height: 250px;
         margin: 0 auto;
     }
 </style>
@@ -25,13 +25,22 @@
 </ul>
 
 <div class="data-input">Input coding DNA sequence here:</div>
-<textarea type="text" class="seqs dna-data" title="Paste a DNA sequence to calculate melting temperature."></textarea>
+<textarea type="text" class="seqs dna-data" title="Paste a DNA sequence to calculate melting temperature.">
+ATGC   ATGTCTAAGAT    TGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTAAGTAATGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCAGCTAAGTA AT  
+
+    AT    GC   ATGT CTAAGTAATGCATGCTAAGTGCATGTCTAATGTCTAAGTAATGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTTGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTAAGTAATGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGT    
+
+
+ATGCATG TCT ATGTC    TGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTAAGTAATGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCA
+
+ATG    TGC      ATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATG    TGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTAAGTAATGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGCTAAGTA ATGCATGT    TGCATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATGTATGCATGTCTCTAAGTA ATGCATGTCTAAGT
+</textarea>
 
 <div class="data-input">RNA sequence outputs here:</div>
 <textarea type="text" class="seqs rna-data" title="Paste a DNA sequence to calculate melting temperature."></textarea>
 
 <div class="data-input">Amino acid sequence outputs here:</div>
-<textarea type="text" class="seqs amino-data" title="Paste a DNA sequence to calculate melting temperature."></textarea>
+<textarea type="text" class="seqs prt-data" title="Paste a DNA sequence to calculate melting temperature."></textarea>
 
 <button class="calc-button float-right" type="button">Convert</button>
 
@@ -47,6 +56,62 @@
 </ol>
 
 <script>
+    const execute = document.querySelector(".calc-button");
+
+    execute.addEventListener("click", () => {
+        const data = {
+            dna: document.querySelector(".dna-data").value,
+            rna: document.querySelector(".rna-data").value,
+            prt: document.querySelector(".prt-data").value
+        }
+
+        // console.log(data);
+
+        checkSeq(data.dna, "dna");
+        // checkSeq(data.rna, "rna");
+
+        console.log(data);
+    });
+
+    function formatSeq(str, spaces = 3) {
+        const lines = str.split(/\n/);
+        console.log(lines);
+
+        for (let i = 0; i < lines.length; i++) {
+            if (lines[i] === "") {
+
+            }
+        }
+    };
+
+    function checkSeq(str, type) {
+        let chars;
+        if (type === "dna") {
+            chars = /[^ATCG]/;
+        } else if (type === "rna") {
+            chars = /[^UTCG]/;
+        }
+
+        console.log(chars.test(str));
+        console.log(chars);
+
+        if (!(str.length === 0)) {
+            return console.error("Empty string.");
+        }
+
+        if (chars.test(str)) {
+            alert("Only use the following characters (white spaces allowed) for DNA/RNA: A/U TCG.");
+        }
+        return;
+    }
+
+
+
+
+</script>
+
+<!-- <script>
+
     let execute = document.querySelector(".calc-button");
 
     function parseString(str, n) {
@@ -203,6 +268,6 @@
             }
         }
     });
-</script>
+</script> -->
 
 <!-- ATGCATGTCTAAGTA -->
