@@ -68,7 +68,7 @@
 
 
         <link href="/libraries/syntaxhighlighter/shCore.css" rel="stylesheet" type="text/css" />
-        <link href="/libraries/syntaxhighlighter/shThemeEmacs.css" rel="stylesheet" type="text/css" />
+        <link href="/libraries/syntaxhighlighter/shThemeDefault.css" rel="stylesheet" type="text/css" />
 
 <!-- PWA -->
     <script type="text/javascript" src="/js/pwaPrompt.js"></script>
