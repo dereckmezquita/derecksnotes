@@ -64,19 +64,21 @@ ATG    TGC      ATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATG    TGCATGCTAAGTA AT
 </p>
 
 <pre class="brush: js">
-    const spacerButton = document.querySelector(".spacer-button");
+    const execute = document.querySelector(".spacer-button");
 
-    spacerButton.addEventListener("click", () => {
+    execute.addEventListener("click", () => {
         const dnaInput = document.querySelector(".spacer-input").value; // Get input data
         const uppercaseInput = document.querySelector(".spacer-uppercase").checked; // Check uppercase selection
         const spacerNumber = parseInt(document.querySelector(".spacer-number").value); // Check n spacing selection
+        const output = document.querySelector(".spacer-output");
 
+        console.log("Formatting text!")
         function spaceStr(str, n) {
-            document.querySelector(".spacer-output").value = ""; // Clear output on each run
+            output.value = ""; // Clear output on each run
             let lines = str.split("\n"); // Split into an array at the new lines; new lines become empty strings
 
             lines = lines.filter(l => l !== ""); // Remove new lines empty strings
-            lines = lines.map(l => l.split(" ").join("")); // Split into an array of characters; join with no spacing
+            lines = lines.map(l => l.split(" ").join("")); // Split into an array of strings; join with no spacing
             
             // map creates a new modified array from the results of a given function
             lines = lines.map(l => 
@@ -86,9 +88,9 @@ ATG    TGC      ATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATG    TGCATGCTAAGTA AT
             ).join("\n\n"); // join concatenates all elements together with a given separator
 
             if (uppercaseInput !== true) { // leave text as is
-                document.querySelector(".spacer-output").value += lines;
+                output.value += lines;
             } else { // uppercase text
-                document.querySelector(".spacer-output").value += lines.toUpperCase();
+                output.value += lines.toUpperCase();
             }
         }
 
@@ -106,16 +108,39 @@ ATG    TGC      ATGCTAAGTA ATGCATGTCTAAGTA   TCTAAGTAATGCATG    TGCATGCTAAGTA AT
     </div>
 </ol>
 
-<script type="text/javascript" src="/js/bio.js"></script>
+<!-- <script type="text/javascript" src="/js/bio.js"></script> -->
 
-<script>
-    const spacerButton = document.querySelector(".spacer-button");
-    const dnaInput = document.querySelector(".spacer-input").value; // Get input data
-    const uppercaseInput = document.querySelector(".spacer-uppercase").checked; // Check uppercase selection
-    const spacerNumber = parseInt(document.querySelector(".spacer-number").value); // Check n spacing selection
-    const output = document.querySelector(".spacer-output");
-    
-    spacerButton.addEventListener("click", () => {
+<script>    
+    const execute = document.querySelector(".spacer-button");
+
+    execute.addEventListener("click", () => {
+        const dnaInput = document.querySelector(".spacer-input").value; // Get input data
+        const uppercaseInput = document.querySelector(".spacer-uppercase").checked; // Check uppercase selection
+        const spacerNumber = parseInt(document.querySelector(".spacer-number").value); // Check n spacing selection
+        const output = document.querySelector(".spacer-output");
+
+        console.log("Formatting text!")
+        function spaceStr(str, n) {
+            output.value = ""; // Clear output on each run
+            let lines = str.split("\n"); // Split into an array at the new lines; new lines become empty strings
+
+            lines = lines.filter(l => l !== ""); // Remove new lines empty strings
+            lines = lines.map(l => l.split(" ").join("")); // Split into an array of strings; join with no spacing
+            
+            // map creates a new modified array from the results of a given function
+            lines = lines.map(l => 
+                l.split("").reduce((a, e, i) => a + e + (i % n === (n - 1) ? " " : ""), "")
+                // reduce executes a function over each element of an array
+                // it has three main parts, accumulator, element, index
+            ).join("\n\n"); // join concatenates all elements together with a given separator
+
+            if (uppercaseInput !== true) { // leave text as is
+                output.value += lines;
+            } else { // uppercase text
+                output.value += lines.toUpperCase();
+            }
+        }
+
         spaceStr(dnaInput, spacerNumber);
     });
 </script>
