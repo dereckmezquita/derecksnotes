@@ -48,7 +48,7 @@
             "published": "Yes"
         },
         {
-            "name": "102_introUnixShell",
+            "name": "intro-unix-shell",
             "author": "Dereck de Mézquita",
             "displayName": "Introduction to UNIX shell",
             "image": "/siteImages/allPngs/791.png",
