@@ -1,6 +1,30 @@
 {
     "entries": [
         {
+            "name": "ds-gapminder",
+            "author": "Dereck de Mézquita",
+            "displayName": "Data Science: gapminder dataset visualisations and data munging",
+            "image": "/siteImages/allPngs/412.png",
+            "date": {
+                "year": "2021",
+                "month": "03",
+                "day": "15"
+            },
+            "slogan": "Bowl receiving loving stars.",
+            "summary": "Visualisation and analysis skills by analysing gapminder datasets. Tech stack includes R, tidyverse, ggplot2, plotly, xml2, rvest; SQLite; JavaScript, D3.js; HTML, and CSS.",
+            "primaryTag": "Data Science",
+            "tags": [
+                "Programming",
+                "Maths",
+                "Computer Science",
+                "Engineering",
+                "Biology",
+                "R"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
             "name": "ds-NLP-network-inference",
             "author": "Dereck de Mézquita",
             "displayName": "Data Science: natural language processing & network inference",
@@ -12,7 +36,7 @@
             },
             "slogan": "Golden pink ring.",
             "summary": "The goal of this project is to analyse chat data with my girlfriend; apply statistical methods, graph theory, and other data science techniques.",
-            "primaryTag": "Computer Science",
+            "primaryTag": "Data Science",
             "tags": [
                 "Programming",
                 "Maths",

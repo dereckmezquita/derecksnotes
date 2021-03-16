@@ -1,34 +1,6 @@
 {
     "entries": [
         {
-            "name": "20200411_rlang-chat-analysis",
-            "author": "Dereck de Mézquita",
-            "displayName": "R-lang: chat history analysis",
-            "image": "/siteImages/allPngs/246.png",
-            "date": {
-                "year": "2020",
-                "month": "04",
-                "day": "11"
-            },
-            "slogan": "Stop large spoon",
-            "summary": "Rmd script for analysing chat history data. Simply drop in chat data in appropriate format and then set users/authors names, run the script; additionally run Knitr for an HTML output. The files are available at the git repo.",
-            "primaryTag": "Programming",
-            "tags": [
-                "Programming",
-                "Computer",
-                "Technology",
-                "Command line",
-                "Web-tech",
-                "JavaScript",
-                "R-lang",
-                "R",
-                "GitHub",
-                "Git"
-            ],
-            "likes": 0,
-            "published": "Yes"
-        },
-        {
             "name": "20200402_quickdump",
             "author": "Dereck de Mézquita",
             "displayName": "Quick dump: anatomy, microscopy",
