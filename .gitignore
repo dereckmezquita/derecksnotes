@@ -3,6 +3,7 @@
 temp
 **/*.zip
 .vscode
+deprecated/
 
 /styles/css
 
