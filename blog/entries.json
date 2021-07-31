@@ -1,6 +1,29 @@
 {
     "entries": [
         {
+            "name": "20200730_copper",
+            "author": "Dereck de Mézquita",
+            "displayName": "Copper and infectious diseases",
+            "image": "/siteImages/allPngs/276.png",
+            "date": {
+                "year": "2021",
+                "month": "07",
+                "day": "30"
+            },
+            "slogan": "Running sterile Mercury",
+            "summary": "Since Antiquity, Copper has been used for fighting infectious diseases. The Persians used bronze (an alloy of Copper and tin) for healing wounds. The Romans, Egyptians and Aztecs used medicinal preparations based on Copper to cure sore throat and for daily hygiene.",
+            "primaryTag": "Biology",
+            "tags": [
+                "Biology",
+                "Science",
+                "Medicine",
+                "Anatomy",
+                "Microscopy"
+            ],
+            "likes": 0,
+            "published": "Yes"
+        },
+        {
             "name": "20200402_quickdump",
             "author": "Dereck de Mézquita",
             "displayName": "Quick dump: anatomy, microscopy",
